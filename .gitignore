@@ -11,14 +11,17 @@ __pycache__/
 venv/
 
 # env / secrets — use .env.example as template
-livelaku/.env
+.env
 *.pem
 *.key
 
 # checkpoints / weights (large) — keep folder, ignore binaries until needed
-livelaku/model/checkpoints/*.bin
-livelaku/model/checkpoints/*.safetensors
-livelaku/model/checkpoints/*.pt
+model/checkpoints/*.bin
+model/checkpoints/*.safetensors
+model/checkpoints/*.pt
+
+# local rulebook / large xlsx not part of submission
+aic-rulebook.md
 
 # OS
 .DS_Store
