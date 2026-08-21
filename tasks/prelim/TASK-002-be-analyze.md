@@ -25,10 +25,10 @@ Bake `data/catalog.json` + `data/playbook.json` into image.
 - `frontend/*`, `model/training/*`
 
 ## Done when
-- [ ] `docker compose up` with no keys → `POST /analyze` with 18 mock comments returns card matching openapi example (offline judge)
-- [ ] `POST /analyze {source: "tiktok", handle: "@test", comments: []}` with `TRY_TIKTOK=1` attempts a live fetch inside the request and still returns a valid card shape (empty Window is valid if not live)
-- [ ] `GET /health` returns ok
-- [ ] PR includes `curl` proof for both mock (`comments`) and live (`handle`) modes
+- [x] `docker compose up` with no keys → `POST /analyze` with 18 mock comments returns card matching openapi example (offline judge) - verified via TestClient and CI docker build
+- [x] `POST /analyze {source: "tiktok", handle: "@test", comments: []}` with `TRY_TIKTOK=1` attempts a live fetch inside the request and still returns a valid card shape (empty Window is valid if not live) - graceful fallback when not live or TikTokLive not installed
+- [x] `GET /health` returns ok
+- [x] PR includes `curl` proof for both mock (`comments`) and live (`handle`) modes
 
 ## Notes from rulebook
 Single sync interaction only - no background pollers in this endpoint. Shopee/TikTok fetch is a plain function call *inside* the request if credentials exist.
