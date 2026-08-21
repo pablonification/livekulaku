@@ -1,8 +1,8 @@
 {
   "products": [
-    {"id": "p1", "name": "Kaos Oversize Hitam", "price_display": "99k", "promo": "free ongkir Jawa", "stock": 42},
-    {"id": "p2", "name": "Hoodie Cream", "price_display": "149k", "promo": "diskon 10k", "stock": 18},
-    {"id": "p3", "name": "Celana Cargo", "price_display": "129k", "promo": "COD ready", "stock": 7}
+    {"id": "p1", "name": "Kaos Oversize Hitam", "price": "99k", "promo": "free ongkir Jawa", "stock": 42},
+    {"id": "p2", "name": "Hoodie Cream", "price": "149k", "promo": "diskon 10k", "stock": 18},
+    {"id": "p3", "name": "Celana Cargo", "price": "129k", "promo": "COD ready", "stock": 7}
   ],
   "shipping_note": "free ongkir Jawa, luar Jawa +10k",
   "shop_name": "LiveLaku Demo Store"
