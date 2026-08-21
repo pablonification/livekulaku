@@ -4,12 +4,9 @@
 **Contract:** `contracts/openapi.yaml` → POST /analyze
 
 ## What to build
-Single page: dropdown `[Mock | Shopee | TikTok]` + one input field + one output.
-- Mock → button "Play Flood" replays `data/demo_comments.jsonl`
-- Shopee → input `session_id`
-- TikTok → input `@handle`
-Frontend **batches one Window (10s)** in browser, then POSTs once:
-`POST /analyze {source, comments: [...]}` → renders `Priority Card`.
+Single page: dropdown `[Mock | Shopee | TikTok]` + one input field + one output. Two modes, both sync:
+- Mock (offline judge): button "Play Flood" replays `data/demo_comments.jsonl`, batches one Window (10s) in browser, then `POST /analyze {source, comments: [...]}` → renders `Priority Card`
+- Live Real (when handle or session_id is filled and user clicks Go Live Real): FE sends `POST /analyze {source: "tiktok", handle: "@tokoku", window_seconds: 10, comments: []}` or `{source: "shopee", session_id: "6236215", comments: []}`. BE fetches real comments for that Window inside the single request (no background job), then returns the same Priority Card shape. Mock remains the default for `docker compose up` with no keys.
 
 ## Files you own (only these)
 - `frontend/public/index.html`
