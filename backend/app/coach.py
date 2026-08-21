@@ -50,13 +50,20 @@ class MockCoach:
         entry = self.playbook.get(top["label"], {})
         product = (self.catalog.get("products") or [{}])[0]
 
-        reply_tpl = entry.get("template", "Siap kak, {product} ready ya! {extra}")
-        reply = reply_tpl.format(
-            product=product.get("name", "produk"),
-            price=product.get("price_display", ""),
-            promo=product.get("promo", ""),
-            shipping=self.catalog.get("shipping_note", ""),
-            count=top["count"],
+        reply_tpl = entry.get("template", "Siap kak, {product} ready ya!")
+        # safe format: unknown placeholders become empty string instead of KeyError
+        class _Safe(dict):
+            def __missing__(self, key):
+                return ""
+
+        reply = reply_tpl.format_map(
+            _Safe(
+                product=product.get("name", "produk"),
+                price=product.get("price_display", ""),
+                promo=product.get("promo", ""),
+                shipping=self.catalog.get("shipping_note", ""),
+                count=top["count"],
+            )
         )
         why = (
             f"{top['count']} dari {card_inputs['total']} komen window ini nanya "
