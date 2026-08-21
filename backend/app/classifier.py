@@ -9,8 +9,11 @@ The keyword baseline doubles as the evaluation baseline for the trained model.
 """
 from __future__ import annotations
 
+import os
 import re
 from pathlib import Path
+
+from .intents import ID_TO_LABEL, INTENTS
 
 # ---- keyword baseline -------------------------------------------------
 _PATTERNS: dict[str, list[str]] = {
@@ -58,15 +61,26 @@ class LocalClassifier:
             model=str(ckpt_dir),
             tokenizer=str(ckpt_dir),
             truncation=True,
+            max_length=64,
         )
 
     def predict(self, text: str) -> tuple[str, float]:
         out = self._pipe(text)[0]
-        label = out["label"].replace("LABEL_", "")
+        raw_label = str(out["label"])
+        if raw_label in INTENTS:
+            label = raw_label
+        elif raw_label.upper().startswith("LABEL_"):
+            try:
+                label = ID_TO_LABEL[int(raw_label.rsplit("_", 1)[1])]
+            except (KeyError, ValueError):
+                label = "browse"
+        else:
+            label = "browse"
         return label, float(out["score"])
 
 
-def get_classifier(mode: str = "keyword", ckpt_dir: str = "model/checkpoints"):
+def get_classifier(mode: str | None = None, ckpt_dir: str = "model/checkpoints"):
+    mode = (mode or os.environ.get("CLASSIFIER_MODE", "keyword")).lower()
     if mode == "local" and Path(ckpt_dir).exists():
         try:
             return LocalClassifier(Path(ckpt_dir))

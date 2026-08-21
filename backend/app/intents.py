@@ -24,6 +24,12 @@ INTENTS = {
     "browse": Intent("browse", "Liat-liat", 0.1),
 }
 
+# Stable training and inference order. Hugging Face checkpoints without an
+# explicit id2label mapping expose predictions as LABEL_0, LABEL_1, and so on.
+LABELS = tuple(INTENTS)
+LABEL_TO_ID = {label: index for index, label in enumerate(LABELS)}
+ID_TO_LABEL = {index: label for label, index in LABEL_TO_ID.items()}
+
 DEFAULT_INTENT = INTENTS["browse"]
 
 
