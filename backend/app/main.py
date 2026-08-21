@@ -166,17 +166,87 @@ class MockLikeFallback:
 runtime = Runtime()
 
 
+# ---------------------------------------------------------------- helpers for real live (sync per-request fetch)
+async def _fetch_tiktok_window(handle: str, window_seconds: int) -> list:
+    """Collect real TikTok comments for one Window, sync inside the request. No background hold."""
+    collected: list = []
+    try:
+        from TikTokLive import TikTokLiveClient
+        from TikTokLive.events import CommentEvent
+
+        client = TikTokLiveClient(unique_id=handle.lstrip("@"))
+
+        @client.on(CommentEvent)
+        async def on_comment(event):
+            try:
+                collected.append(
+                    {"user": getattr(event.user, "nickname", None) or getattr(event.user, "uniqueId", "viewer"), "text": event.comment, "platform": "tiktok"}
+                )
+            except Exception:
+                pass
+
+        task = asyncio.create_task(client.start())
+        # collect for window_seconds, then stop
+        await asyncio.sleep(max(2, min(window_seconds, 12)))
+        task.cancel()
+        try:
+            await task
+        except asyncio.CancelledError:
+            pass
+        except Exception:
+            pass
+    except Exception as exc:
+        print(f"[tiktok fetch] failed for {handle}: {exc}")
+    return collected
+
+
+async def _fetch_shopee_window(session_id: str) -> list:
+    """One-shot Shopee official poll inside the request."""
+    try:
+        from .adapters.shopee import ShopeeAdapter
+
+        # reuse adapter's fetch logic with a single poll
+        adapter = ShopeeAdapter()
+        # temporarily set session for this call if provided
+        if session_id and not adapter.configured:
+            # still try unauthenticated single poll via direct API if token missing will just return empty
+            pass
+        # do one poll via helper: use internal _fetch_page if configured
+        import httpx
+
+        if not adapter.configured:
+            return []
+        async with httpx.AsyncClient() as client:
+            data = await adapter._fetch_page(offset=0, client=client)
+            out = []
+            for c in (data.get("response") or {}).get("list") or []:
+                out.append({"user": str(c.get("username") or "viewer"), "text": str(c.get("comment") or ""), "platform": "shopee"})
+            return out
+    except Exception as exc:
+        print(f"[shopee fetch] failed for {session_id}: {exc}")
+        return []
+
+
 # ---------------------------------------------------------------- sync contract (prelim)
 @app.post("/analyze", response_model=AnalyzeResponse)
 @app.post("/api/analyze", response_model=AnalyzeResponse)
 async def analyze(req: AnalyzeRequest) -> AnalyzeResponse:
     """Single Window in → one Priority Card out. Statically validated against contracts/openapi.yaml."""
+    # If FE sent handle/session_id but no comments, fetch real comments inside this single request (sync, no background job)
+    raw_comments = list(req.comments)
+    if not raw_comments and req.handle and req.source == "tiktok":
+        fetched = await _fetch_tiktok_window(req.handle, req.window_seconds)
+        raw_comments = [CommentIn(**c) for c in fetched]  # type: ignore[arg-type]
+    elif not raw_comments and req.session_id and req.source == "shopee":
+        fetched = await _fetch_shopee_window(req.session_id)
+        raw_comments = [CommentIn(**c) for c in fetched]  # type: ignore[arg-type]
+
     # stateless per-request aggregator - no background state
     agg = WindowAggregator(window_seconds=req.window_seconds)
     # classifier is request-local or reused; reload is cheap
     classifier = get_classifier(settings.classifier_mode)
     # map comments → labeled buffer
-    for idx, c in enumerate(req.comments):
+    for idx, c in enumerate(raw_comments):
         label, _ = classifier.predict(c.text or "")
         agg.add(BufferedComment(comment_id=f"req-{idx}", user=c.user or "viewer", text=c.text, platform=c.platform, label=label))
     inputs = agg.build_card_inputs()

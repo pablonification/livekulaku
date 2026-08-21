@@ -20,6 +20,8 @@ class CommentIn(BaseModel):
 class AnalyzeRequest(BaseModel):
     source: Literal["mock", "shopee", "tiktok"] = Field(default="mock")
     window_seconds: int = Field(default=10, ge=1, le=120)
+    handle: Optional[str] = Field(default=None, example="@tokoku", description="TikTok handle for live fetch when comments empty")
+    session_id: Optional[str] = Field(default=None, example="6236215", description="Shopee session id for live fetch when comments empty")
     comments: List[CommentIn] = Field(default_factory=list, max_length=80)
 
 

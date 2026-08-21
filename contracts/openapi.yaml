@@ -63,7 +63,7 @@ components:
   schemas:
     AnalyzeRequest:
       type: object
-      required: [comments]
+      required: []
       properties:
         source:
           type: string
@@ -72,6 +72,14 @@ components:
         window_seconds:
           type: integer
           example: 10
+        handle:
+          type: string
+          example: "@tokoku"
+          description: TikTok handle for live fetch inside request when source is tiktok and comments is empty
+        session_id:
+          type: string
+          example: "6236215"
+          description: Shopee session id for live fetch inside request when source is shopee and comments is empty
         comments:
           type: array
           minItems: 0
