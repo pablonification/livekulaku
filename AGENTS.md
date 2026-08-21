@@ -42,10 +42,22 @@ You are an implementer. You touch **only** files listed in the ticket's "Files y
 - **FE:** write shot list mapped to Done checkboxes (empty/loading/success) for human screen recording.
 - Leave `PROOF-PENDING` placeholders in PR - human replaces them. Don't delete the proof section.
 
+### CI
+
+- GitHub CI runs `backend` (pytest + contract), `docker` (compose build + healthcheck + smoke POST), and `lint` (no em dash). Keep them green.
+- If CI fails due to billing or runner limit, run the same checks **locally** and treat local green as the gate:
+  ```bash
+  pytest backend/tests/test_contract.py -v
+  docker compose build
+  docker compose up -d && curl -sf http://localhost:8000/api/health && curl -sf -X POST http://localhost:8000/analyze -H "Content-Type: application/json" -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"}]}' | grep -q suggested_reply; docker compose down -v
+  grep -R "—" --exclude-dir=.git --exclude-dir=.agents --exclude-dir=.claude --include="*.md" --include="*.yaml" --include="*.py" --include="*.js" --include="*.html" .
+  ```
+- Do not invent a pass when a required check is not green and no local proof exists.
+
 ### End session
 
 - `docker compose up --build` boots with **no keys** and shows mock flood → card (offline judge contract).
-- Lint + `curl` checks pass.
+- Lint + `curl` checks pass (CI green or local green when CI is limited).
 - Update ticket's Done checkboxes.
 - State what's still open.
 
