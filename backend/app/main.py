@@ -1,7 +1,7 @@
 """LiveLaku backend: sync POST /analyze (rulebook: sync-only, single input→output).
 
 Also keeps legacy WS /api/live/* for local dev; prelim contract is POST /analyze.
-Schemas are 1:1 with contracts/openapi.yaml — see backend/app/schemas.py.
+Schemas are 1:1 with contracts/openapi.yaml - see backend/app/schemas.py.
 """
 from __future__ import annotations
 
@@ -171,7 +171,7 @@ runtime = Runtime()
 @app.post("/api/analyze", response_model=AnalyzeResponse)
 async def analyze(req: AnalyzeRequest) -> AnalyzeResponse:
     """Single Window in → one Priority Card out. Statically validated against contracts/openapi.yaml."""
-    # stateless per-request aggregator — no background state
+    # stateless per-request aggregator - no background state
     agg = WindowAggregator(window_seconds=req.window_seconds)
     # classifier is request-local or reused; reload is cheap
     classifier = get_classifier(settings.classifier_mode)
@@ -189,7 +189,7 @@ async def analyze(req: AnalyzeRequest) -> AnalyzeResponse:
             clusters=[],
             top_cluster=None,
             urgency=0,
-            suggested_reply="Belum ada komen di Window ini — putar Mock Flood untuk demo.",
+            suggested_reply="Belum ada komen di Window ini - putar Mock Flood untuk demo.",
             why_now="Window kosong, tidak ada cluster.",
             tone="inform",
             source=getattr(get_coach(settings), "name", "mock"),
@@ -199,7 +199,7 @@ async def analyze(req: AnalyzeRequest) -> AnalyzeResponse:
     coach = get_coach(settings)
     try:
         suggestion = await asyncio.wait_for(coach.generate(inputs), timeout=8.0)
-    except Exception as exc:  # noqa: BLE001 — API down → deterministic fallback
+    except Exception as exc:  # noqa: BLE001 - API down → deterministic fallback
         print(f"[coach] api failed ({exc}) → mock template")
         from .coach import MockCoach
 

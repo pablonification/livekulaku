@@ -60,7 +60,7 @@ class MockCoach:
         )
         why = (
             f"{top['count']} dari {card_inputs['total']} komen window ini nanya "
-            f"{top['label_id'].lower()} — jawab sekarang sebelum pindah live lain."
+            f"{top['label_id'].lower()} - jawab sekarang sebelum pindah live lain."
         )
         tone = entry.get("tone", "inform")
         return {

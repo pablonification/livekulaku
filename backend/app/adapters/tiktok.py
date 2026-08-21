@@ -1,6 +1,6 @@
 """TikTok adapter via TikTokLive python client (unofficial, disclosed).
 
-Enabled ONLY when MODE=tiktok and TRY_TIKTOK=1 — judges never touch this.
+Enabled ONLY when MODE=tiktok and TRY_TIKTOK=1 - judges never touch this.
 Production roadmap is official TikTok Shop Partner API access.
 """
 from __future__ import annotations

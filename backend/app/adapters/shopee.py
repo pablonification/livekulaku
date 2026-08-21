@@ -2,7 +2,7 @@
 
 Uses v2.livestream.get_latest_comment_list polling (~3s), HMAC-SHA256 signed.
 
-Status: SKELETON — signing format must be verified against the partner console
+Status: SKELETON - signing format must be verified against the partner console
 for your app type before production use. Enabled only when SHOPEE_* env vars
 are present and MODE=shopee. Never enabled by default => judges unaffected.
 

@@ -1,6 +1,6 @@
-# TASK-003 — ML Supporting Model + RAG
+# TASK-003 - ML Supporting Model + RAG
 
-**Owner:** ML (1 of 3 devs) — parallel with FE+BE
+**Owner:** ML (1 of 3 devs) - parallel with FE+BE
 **Contract:** `contracts/openapi.yaml` → labels + card fields, plus `docs/adr/`
 
 ## What to build
@@ -21,7 +21,7 @@ Prove "kustomisasi" without shipping a huge model:
 - `frontend/*`, `backend/app/main.py` (call your modules, don't edit)
 
 ## Done when
-- [ ] `classifier.py` keyword baseline vs IndoBERT — accuracy reported in PR (even if small win)
+- [ ] `classifier.py` keyword baseline vs IndoBERT - accuracy reported in PR (even if small win)
 - [ ] `coach.py` with `META_API_KEY` set → Muse Spark 1.2 contributor returns JSON matching AnalyzeResponse; without key → mock template (no crash)
 - [ ] Weights + playbook are inside `docker compose` image (offline works)
 - [ ] PR links to training notebook/log

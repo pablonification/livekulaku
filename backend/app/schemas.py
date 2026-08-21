@@ -1,4 +1,4 @@
-"""Pydantic schemas — 1:1 with contracts/openapi.yaml
+"""Pydantic schemas - 1:1 with contracts/openapi.yaml
 
 Do not hand-edit fields without updating contracts/openapi.yaml first.
 Contract is law (AGENTS.md). If they drift, openapi.yaml wins.

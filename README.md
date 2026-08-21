@@ -1,15 +1,15 @@
-# LiveLaku — Flood to Priority Card
+# LiveLaku - Flood to Priority Card
 
 **COMPFEST 18 AIC | AI for the Backbone of the Economy | Smart Commerce**
 
-Dual live commerce copilot for TikTok Shop + Shopee Live. Hosts with 500–5k viewers (15–80 c/min) can't read the flood — LiveLaku buffers one **Window** (10s), clusters comments, and returns one **Priority Card** `{top_cluster, urgency 0–100, suggested_reply, why_now}`.
+Dual live commerce copilot for TikTok Shop + Shopee Live. Hosts with 500–5k viewers (15–80 c/min) can't read the flood - LiveLaku buffers one **Window** (10s), clusters comments, and returns one **Priority Card** `{top_cluster, urgency 0–100, suggested_reply, why_now}`.
 
 > Rulebook limits for prelim are respected: single input → output FE, sync-only BE, frozen inference. No background jobs, no DB, no auth pages. See `AGENTS.md` for agent rules and `contracts/openapi.yaml` for API contract.
 
 ## Stack
 
-- **FE:** plain JS (no build) served by nginx — single page
-- **BE:** FastAPI (Python 3.11) — `POST /analyze` sync only
+- **FE:** plain JS (no build) served by nginx - single page
+- **BE:** FastAPI (Python 3.11) - `POST /analyze` sync only
 - **AI:** Tier-1 small IndoBERT classifier (supporting model, baked `model/checkpoints/`) + Tier-2 Muse Spark 1.2 contributor (frozen prompt + `data/catalog.json` + `data/playbook.json` via RAG-lite). Mock fallback when no key.
 - **Infra:** `docker compose up --build` (offline judge-safe)
 
@@ -51,7 +51,7 @@ Source of truth: `contracts/openapi.yaml`
 
 ```
 contracts/openapi.yaml   API contract (frozen)
-tasks/prelim/TASK-*.md   work tickets — one per dev, agent-friendly
+tasks/prelim/TASK-*.md   work tickets - one per dev, agent-friendly
 frontend/public/         FE (TASK-001)
 backend/app/             BE + adapters + aggregator (TASK-002)
   classifier.py, coach.py  ML hooks (TASK-003)

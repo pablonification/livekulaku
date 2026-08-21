@@ -1,6 +1,6 @@
-# TASK-002 — BE Sync Analyze
+# TASK-002 - BE Sync Analyze
 
-**Owner:** BE (1 of 3 devs) — parallel with FE+ML
+**Owner:** BE (1 of 3 devs) - parallel with FE+ML
 **Contract:** `contracts/openapi.yaml` → POST /analyze
 
 ## What to build
@@ -17,7 +17,7 @@ Bake `data/catalog.json` + `data/playbook.json` into image.
 - `backend/app/main.py`
 - `backend/app/aggregator.py`
 - `backend/app/adapters/*.py`
-- `contracts/openapi.yaml` (steward — changes need FE+ML review)
+- `contracts/openapi.yaml` (steward - changes need FE+ML review)
 
 ## Files you DO NOT touch
 - `frontend/*`, `model/training/*`
@@ -28,4 +28,4 @@ Bake `data/catalog.json` + `data/playbook.json` into image.
 - [ ] PR includes `curl` proof (copy-paste from README)
 
 ## Notes from rulebook
-Single sync interaction only — no background pollers in this endpoint. Shopee/TikTok fetch is a plain function call *inside* the request if credentials exist.
+Single sync interaction only - no background pollers in this endpoint. Shopee/TikTok fetch is a plain function call *inside* the request if credentials exist.

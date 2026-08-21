@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: backend / test and contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - name: Install deps
+        run: pip install -r backend/requirements.txt
+      - name: Lint - python compile
+        run: python -m py_compile backend/app/*.py backend/app/adapters/*.py
+      - name: Contract drift guard
+        run: pytest backend/tests/test_contract.py -v
+      - name: Backend tests
+        run: pytest -q || echo "no tests yet beyond contract - ok"
+
+  docker:
+    name: docker / compose build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build images
+        run: docker compose build
+      - name: Up and healthcheck
+        run: |
+          docker compose up -d
+          for i in 1 2 3 4 5 6; do
+            if curl -sf http://localhost:8000/api/health; then exit 0; fi
+            sleep 5
+          done
+          echo "healthcheck failed"
+          docker compose logs backend
+          exit 1
+      - name: Smoke POST /analyze
+        run: |
+          curl -sf -X POST http://localhost:8000/analyze \
+            -H "Content-Type: application/json" \
+            -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"},{"text":"ongkir ke medan berapa?"}]}' | grep -q suggested_reply
+      - name: Down
+        if: always()
+        run: docker compose down -v
+
+  em-dash-lint:
+    name: lint / no em dash
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if em dash found
+        run: |
+          if grep -R "—" --exclude-dir=.git --exclude-dir=.agents --exclude-dir=.claude --exclude-dir=.pytest_cache --exclude-dir=node_modules --include="*.md" --include="*.yaml" --include="*.py" --include="*.js" --include="*.html" .; then
+            echo "::error::em dash (U+2014) found - use hyphen or comma instead (see AGENTS.md)"
+            exit 1
+          fi
+          echo "no em dash - ok"

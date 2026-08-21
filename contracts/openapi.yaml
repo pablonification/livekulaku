@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: LiveLaku — Flood to Priority Card
+  title: LiveLaku - Flood to Priority Card
   version: 0.1.0
   description: |
     Single sync endpoint for prelim. Frontend batches one Window (10s)
@@ -54,8 +54,8 @@ paths:
                     - "kak harga berapa?"
                     - "spill harga dong"
                 urgency: 82
-                suggested_reply: "Harga 99k free ongkir Jawa, luar Jawa +10k kak — langsung checkout biar kebagian!"
-                why_now: "9 dari 18 komen window ini nanya harga — jawab sekarang sebelum pindah live lain."
+                suggested_reply: "Harga 99k free ongkir Jawa, luar Jawa +10k kak - langsung checkout biar kebagian!"
+                why_now: "9 dari 18 komen window ini nanya harga - jawab sekarang sebelum pindah live lain."
                 tone: closing
                 source: mock # mock | muse-spark-1.2-contributor
 

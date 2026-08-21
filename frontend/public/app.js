@@ -19,7 +19,7 @@ const cardEl = el('priorityCard'), cardTop = el('cardTop'), cardReply = el('card
 
 function renderBuffer() {
   bufCount.textContent = buffer.length;
-  bufUl.innerHTML = buffer.slice(-20).map(c => `<li><b>${c.user||'viewer'}</b> — ${c.text} <small>(${c.platform})</small></li>`).join('');
+  bufUl.innerHTML = buffer.slice(-20).map(c => `<li><b>${c.user||'viewer'}</b> - ${c.text} <small>(${c.platform})</small></li>`).join('');
   const counts = {};
   buffer.forEach(c => counts[c.platform]=(counts[c.platform]||0)+1);
   clustersEl.innerHTML = Object.entries(counts).map(([k,v])=>`<span>${k}: ${v}</span>`).join('') || '<span>no comments yet</span>';
@@ -41,13 +41,13 @@ async function sendWindow() {
     const r = await fetch('/api/analyze', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
     if (!r.ok) throw new Error(r.statusText);
     const card = await r.json();
-    cardTop.textContent = card.top_cluster ? `${card.top_cluster.label_id} — ${card.top_cluster.count}/${card.total} (${Math.round(card.top_cluster.share*100)}%)` : 'No flood in this Window';
+    cardTop.textContent = card.top_cluster ? `${card.top_cluster.label_id} - ${card.top_cluster.count}/${card.total} (${Math.round(card.top_cluster.share*100)}%)` : 'No flood in this Window';
     cardReply.textContent = card.suggested_reply;
     cardWhy.textContent = card.why_now;
     cardUrg.textContent = `Urgency ${card.urgency}`;
     cardSrc.textContent = card.source;
   } catch(e) {
-    cardReply.textContent = 'API error — is backend on :8000?';
+    cardReply.textContent = 'API error - is backend on :8000?';
     cardWhy.textContent = String(e);
   }
 }

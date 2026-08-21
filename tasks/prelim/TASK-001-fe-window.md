@@ -1,6 +1,6 @@
-# TASK-001 — FE Window + Single Page
+# TASK-001 - FE Window + Single Page
 
-**Owner:** FE (1 of 3 devs) — can run in parallel with BE+ML
+**Owner:** FE (1 of 3 devs) - can run in parallel with BE+ML
 **Contract:** `contracts/openapi.yaml` → POST /analyze
 
 ## What to build
