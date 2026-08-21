@@ -27,7 +27,7 @@ def test_openapi_example_parses():
         "source": "mock",
     }
 
-    from livelaku.backend.app.schemas import AnalyzeRequest, AnalyzeResponse
+    from backend.app.schemas import AnalyzeRequest, AnalyzeResponse
 
     # will raise ValidationError if drifted
     req = AnalyzeRequest(**example_req)
