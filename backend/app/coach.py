@@ -4,8 +4,8 @@ Providers:
 - api  : Meta Muse Spark 1.2 (contributor tier), OpenAI-compatible, structured JSON.
 - mock : deterministic template cards grounded in data/catalog.json (judge-safe).
 
-COACH_PROVIDER=auto -> api if META_API_KEY present else mock.
-API failures always fall back to mock with source flagged, never crash.
+META_API_KEY present selects Muse Spark, otherwise the offline mock is used.
+API failures always fall back to the deterministic mock and never crash.
 """
 from __future__ import annotations
 
@@ -13,9 +13,18 @@ import json
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
+MODULE_PATH = Path(__file__).resolve()
+DATA_DIR_CANDIDATES = (
+    MODULE_PATH.parents[2] / "data",
+    MODULE_PATH.parents[1] / "data",
+)
+DATA_DIR = next(
+    (candidate for candidate in DATA_DIR_CANDIDATES if candidate.is_dir()),
+    DATA_DIR_CANDIDATES[-1],
+)
 CATALOG_PATH = DATA_DIR / "catalog.json"
 PLAYBOOK_PATH = DATA_DIR / "playbook.json"
+MUSE_MODEL = "muse-spark-1.2-contributor"
 
 CARD_SCHEMA: dict[str, Any] = {
     "type": "object",
@@ -27,6 +36,8 @@ CARD_SCHEMA: dict[str, Any] = {
         "tone": {"type": "string", "enum": ["closing", "reassure", "inform", "upsell"]},
     },
 }
+CARD_FIELDS = frozenset(CARD_SCHEMA["required"])
+CARD_TONES = frozenset(CARD_SCHEMA["properties"]["tone"]["enum"])
 
 
 def _load_json(path: Path, default: Any) -> Any:
@@ -34,6 +45,16 @@ def _load_json(path: Path, default: Any) -> Any:
         return json.loads(path.read_text())
     except Exception:  # noqa: BLE001
         return default
+
+
+def _validated_card(payload: Any) -> dict[str, str]:
+    if not isinstance(payload, dict) or set(payload) != CARD_FIELDS:
+        raise ValueError("coach response fields do not match the card schema")
+    if not all(isinstance(payload[field], str) for field in CARD_FIELDS):
+        raise ValueError("coach response fields must be strings")
+    if payload["tone"] not in CARD_TONES:
+        raise ValueError("coach response tone is not allowed")
+    return payload
 
 
 class MockCoach:
@@ -59,7 +80,7 @@ class MockCoach:
         reply = reply_tpl.format_map(
             _Safe(
                 product=product.get("name", "produk"),
-                price=product.get("price_display", ""),
+                price=product.get("price", ""),
                 promo=product.get("promo", ""),
                 shipping=self.catalog.get("shipping_note", ""),
                 count=top["count"],
@@ -101,25 +122,27 @@ class MuseSparkCoach:
         )
 
     async def generate(self, card_inputs: dict) -> dict:
-        resp = await self._client.chat.completions.create(
-            model=self.model,
-            reasoning_effort="minimal",
-            response_format={"type": "json_schema", "json_schema": {"name": "priority_card", "schema": CARD_SCHEMA, "strict": True}},
-            messages=[
-                {"role": "system", "content": self._system_prompt()},
-                {"role": "user", "content": json.dumps(card_inputs, ensure_ascii=False)},
-            ],
-        )
-        content = resp.choices[0].message.content or "{}"
-        return json.loads(content)
+        try:
+            resp = await self._client.chat.completions.create(
+                model=self.model,
+                reasoning_effort="minimal",
+                response_format={"type": "json_schema", "json_schema": {"name": "priority_card", "schema": CARD_SCHEMA, "strict": True}},
+                messages=[
+                    {"role": "system", "content": self._system_prompt()},
+                    {"role": "user", "content": json.dumps(card_inputs, ensure_ascii=False)},
+                ],
+            )
+            content = resp.choices[0].message.content or "{}"
+            return _validated_card(json.loads(content))
+        except Exception as exc:  # noqa: BLE001
+            print(f"[coach] api request failed ({exc}) -> mock")
+            return await MockCoach().generate(card_inputs)
 
 
 def get_coach(settings) -> Any:
-    if settings.coach_provider == "mock":
-        return MockCoach()
-    if settings.coach_provider == "api" or (settings.coach_provider == "auto" and settings.meta_api_key):
+    if settings.meta_api_key:
         try:
-            return MuseSparkCoach(settings.meta_api_key, settings.meta_base_url, settings.meta_model)
+            return MuseSparkCoach(settings.meta_api_key, settings.meta_base_url, MUSE_MODEL)
         except Exception as exc:  # noqa: BLE001
             print(f"[coach] api init failed ({exc}) -> mock")
     return MockCoach()
