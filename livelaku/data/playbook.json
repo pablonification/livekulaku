@@ -1,0 +1,10 @@
+{
+  "harga": {"tone": "inform", "template": "Harga {product} {price} {promo} kak — langsung checkout biar kebagian!"},
+  "bandingkan_harga": {"tone": "reassure", "template": "Betul beda dikit kak {product} {price} tapi {promo} + garansi — worth it!"},
+  "ongkir": {"tone": "inform", "template": "Ongkir {shipping} kak, COD juga bisa — spill alamatnya ya!"},
+  "cod": {"tone": "reassure", "template": "Bisa COD kak {product} {promo} — checkout COD langsung kami proses!"},
+  "garansi": {"tone": "reassure", "template": "Garansi 7 hari retur kak — aman, langsung CO aja!"},
+  "stok": {"tone": "closing", "template": "Stok {product} sisa dikit kak — amankan sekarang sebelum habis!"},
+  "checkout": {"tone": "closing", "template": "Gas checkout kak! Klik keranjang kuning langsung ya — kami tunggu!"},
+  "browse": {"tone": "inform", "template": "Siap kak, tanya aja — {product} ready {promo}!"}
+}

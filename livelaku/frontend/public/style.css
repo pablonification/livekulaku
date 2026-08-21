@@ -1,0 +1,14 @@
+*{box-sizing:border-box}body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:900px;margin:0 auto;padding:16px;line-height:1.5}
+header h1{margin:0} .sub{color:#666;margin:4px 0 16px}
+.card{border:1px solid #ddd;border-radius:12px;padding:16px;margin:12px 0;background:#fff}
+label{display:block;margin:8px 0} select,input{width:100%;padding:8px;border:1px solid #ccc;border-radius:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px} button{padding:8px 12px;border-radius:8px;border:1px solid #111;background:#111;color:#fff;cursor:pointer}
+button:nth-child(2){background:#fff;color:#111}
+.hint{color:#666;font-size:13px}
+.buffer{max-height:160px;overflow:auto;border:1px dashed #ddd;border-radius:8px;padding:8px;list-style:none}
+.buffer li{padding:2px 0;border-bottom:1px solid #f0f0f0;font-size:13px}
+.clusters{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.clusters span{background:#f3f3f3;border-radius:999px;padding:4px 8px;font-size:12px}
+.priority{border-color:#111} .hidden{display:none}
+.reply{font-size:18px;font-weight:700} .why{color:#444}
+.meta{color:#888;font-size:12px}

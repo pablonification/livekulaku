@@ -1,0 +1,129 @@
+openapi: 3.0.3
+info:
+  title: LiveLaku — Flood to Priority Card
+  version: 0.1.0
+  description: |
+    Single sync endpoint for prelim. Frontend batches one Window (10s)
+    of comments, POSTs once, gets one Priority Card back. Frozen at build.
+
+paths:
+  /analyze:
+    post:
+      summary: Analyze one Window → one Priority Card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeRequest'
+            example:
+              source: mock # mock | shopee | tiktok
+              window_seconds: 10
+              comments:
+                - user: budi_99
+                  text: "kak harga berapa?"
+                  platform: tiktok
+                  ts: 1710000000
+                - user: sari
+                  text: "ongkir ke medan berapa kak?"
+                  platform: shopee
+                  ts: 1710000001
+      responses:
+        '200':
+          description: Priority Card for that Window
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeResponse'
+              example:
+                total: 18
+                window_seconds: 10
+                clusters:
+                  - label: harga
+                    count: 9
+                    share: 0.5
+                  - label: ongkir
+                    count: 5
+                    share: 0.28
+                top_cluster:
+                  label: harga
+                  label_id: Harga
+                  count: 9
+                  share: 0.5
+                  samples:
+                    - "kak harga berapa?"
+                    - "spill harga dong"
+                urgency: 82
+                suggested_reply: "Harga 99k free ongkir Jawa, luar Jawa +10k kak — langsung checkout biar kebagian!"
+                why_now: "9 dari 18 komen window ini nanya harga — jawab sekarang sebelum pindah live lain."
+                tone: closing
+                source: mock # mock | muse-spark-1.2-contributor
+
+components:
+  schemas:
+    AnalyzeRequest:
+      type: object
+      required: [comments]
+      properties:
+        source:
+          type: string
+          enum: [mock, shopee, tiktok]
+          example: mock
+        window_seconds:
+          type: integer
+          example: 10
+        comments:
+          type: array
+          minItems: 0
+          maxItems: 80
+          items:
+            $ref: '#/components/schemas/CommentIn'
+
+    CommentIn:
+      type: object
+      required: [text]
+      properties:
+        user:
+          type: string
+          example: budi_99
+        text:
+          type: string
+          example: "kak harga berapa?"
+        platform:
+          type: string
+          enum: [tiktok, shopee, mock]
+        ts:
+          type: integer
+          description: unix seconds, optional
+
+    AnalyzeResponse:
+      type: object
+      required: [total, window_seconds, clusters, top_cluster, urgency, suggested_reply, why_now]
+      properties:
+        total:
+          type: integer
+        window_seconds:
+          type: integer
+        clusters:
+          type: array
+          items:
+            type: object
+            properties:
+              label: {type: string}
+              count: {type: integer}
+              share: {type: number}
+        top_cluster:
+          type: object
+          properties:
+            label: {type: string}
+            label_id: {type: string}
+            count: {type: integer}
+            share: {type: number}
+            samples:
+              type: array
+              items: {type: string}
+        urgency: {type: integer, minimum: 0, maximum: 100}
+        suggested_reply: {type: string}
+        why_now: {type: string}
+        tone: {type: string, enum: [closing, reassure, inform, upsell]}
+        source: {type: string}

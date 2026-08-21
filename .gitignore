@@ -1,0 +1,29 @@
+# agents / skills (local symlinks)
+.agents/
+.claude/
+skills-lock.json
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# env / secrets — use .env.example as template
+livelaku/.env
+*.pem
+*.key
+
+# checkpoints / weights (large) — keep folder, ignore binaries until needed
+livelaku/model/checkpoints/*.bin
+livelaku/model/checkpoints/*.safetensors
+livelaku/model/checkpoints/*.pt
+
+# OS
+.DS_Store
+.idea/
+.vscode/
+
+# demo / large data not needed in git history
+Hackvid 24_25.xlsx
