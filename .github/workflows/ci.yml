@@ -56,9 +56,15 @@ jobs:
           exit 1
       - name: Smoke POST /analyze
         run: |
-          curl -sf -X POST http://localhost:8000/analyze \
+          echo "health:"
+          curl -s http://localhost:8000/api/health | head -n 20
+          echo "POST /analyze:"
+          curl -s -X POST http://localhost:8000/analyze \
             -H "Content-Type: application/json" \
-            -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"},{"text":"ongkir ke medan berapa?"}]}' | grep -q suggested_reply
+            -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"},{"text":"ongkir ke medan berapa?"}]}' | tee /tmp/resp.json; cat /tmp/resp.json; echo ""
+          grep -q suggested_reply /tmp/resp.json
+          echo "POST /api/analyze also:"
+          curl -s -X POST http://localhost:8000/api/analyze -H "Content-Type: application/json" -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"}]}' | tee /tmp/resp2.json; cat /tmp/resp2.json; echo ""
       - name: Down
         if: always()
         run: docker compose down -v
