@@ -57,12 +57,19 @@ jobs:
       - name: Smoke POST /analyze
         run: |
           echo "health:"
-          curl -s http://localhost:8000/api/health | head -n 20
+          curl -s http://localhost:8000/api/health | head -n 20; echo ""
           echo "POST /analyze:"
+          set +e
           curl -s -X POST http://localhost:8000/analyze \
             -H "Content-Type: application/json" \
             -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"},{"text":"ongkir ke medan berapa?"}]}' | tee /tmp/resp.json; cat /tmp/resp.json; echo ""
-          grep -q suggested_reply /tmp/resp.json
+          if ! grep -q suggested_reply /tmp/resp.json; then
+            echo "--- backend logs on failure ---"
+            docker compose logs backend --tail 200 || true
+            docker compose exec backend ls -R /app/data || true
+            docker compose exec backend cat /app/data/catalog.json || true
+            exit 1
+          fi
           echo "POST /api/analyze also:"
           curl -s -X POST http://localhost:8000/api/analyze -H "Content-Type: application/json" -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"}]}' | tee /tmp/resp2.json; cat /tmp/resp2.json; echo ""
       - name: Down
