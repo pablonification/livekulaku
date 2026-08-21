@@ -1,0 +1,21 @@
+@import '@astryxdesign/core/reset.css';
+@import '@astryxdesign/core/astryx.css';
+@import '@astryxdesign/theme-neutral/theme.css';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-background-base, #fafaf8);
+  color: var(--color-text-primary);
+}
+
+/* keep the page centered like before */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
