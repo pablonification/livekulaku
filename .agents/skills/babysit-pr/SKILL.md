@@ -32,22 +32,27 @@ Do not let review feedback expand the PR beyond the user's original goal. Addres
 
 If nothing has changed, stay quiet rather than posting filler comments. Stop when the review bots and required checks are green on the latest commit. Merge only when the user explicitly requested it; otherwise report that the PR is ready.
 
-## Ganesa Space ready gate (this repo)
+## LiveLaku ready gate (this repo)
 
 A PR is ready only when:
 
-- **CI green** on the current head (`api`, `web`, `contract`, `images`, `e2e`, `docs / validate` all pass)
-- **Greptile ≥ 4/5** and every finding with priority ≤ P1 is fixed or explicitly waived with evidence in its thread; all other actionable findings are dispositioned
-- **A missing or unconfigured required gate is not green** — never invent a pass
-- **Docs / validate** passes (`node scripts/check-docs.mjs` + `node scripts/ui-parity.mjs` where relevant)
-
-Greptile 4/5 with a documented follow-up (e.g., AnonChat linkage forever → retention follow-up) is a pass if the gap is explicitly recorded as a tracked follow-up, not silently ignored.
+- **CI green** on the current head (`backend` - pytest + contract, `docker` - compose build + healthcheck + smoke POST, `lint` - no em dash all pass) or local green when CI is limited by billing or runner (see How to babysit step 3)
+- **A missing or unconfigured required gate is not green** — never invent a pass without local proof
+- **Contract drift guard** passes (`pytest backend/tests/test_contract.py -v`)
+- **Docker smoke** passes (`curl POST /analyze` returns `suggested_reply`)
 
 ## How to babysit here
 
 1. **Poll:** `gh pr checks <number>` and `gh pr view <number> --comments` — compare timestamps against `git log --oneline -1` for the latest push.
 2. **Verify:** open the flagged file/line, confirm the finding is real (not a stale review on an old commit).
-3. **Fix:** smallest code or docs change that addresses the finding; push, then re-poll.
+3. **Fix:** smallest code or docs change that addresses the finding; push, then re-poll. If CI fails due to billing or runner limit, run the same checks **locally** and treat local green as the gate:
+   ```bash
+   pytest backend/tests/test_contract.py -v
+   docker compose build
+   docker compose up -d && curl -sf http://localhost:8000/api/health && curl -sf -X POST http://localhost:8000/analyze -H "Content-Type: application/json" -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"}]}' | grep -q suggested_reply; docker compose down -v
+   grep -R "—" --exclude-dir=.git --exclude-dir=.agents --exclude-dir=.claude --include="*.md" --include="*.yaml" --include="*.py" --include="*.js" --include="*.html" .
+   ```
+   Do not invent a pass when a required check is not green and no local proof exists.
 4. **Waive:** if false positive, reply in thread with evidence and resolve: `[OPencode] RESPONDING ON BEHALF OF FOUNDER ...` + `gh api repos/.../pulls/.../comments/...` resolution if needed.
 5. **Rebase:** if `development` moved, `git fetch origin && git rebase origin/development` or `git merge` as appropriate; push.
 6. **Merge:** only with explicit user request and gate green — then `gh pr merge --squash --delete-branch`.

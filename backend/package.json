@@ -1,0 +1,8 @@
+{
+  "name": "livelaku-tiktok-bridge",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "tiktok-live-connector": "^2.4.4"
+  }
+}

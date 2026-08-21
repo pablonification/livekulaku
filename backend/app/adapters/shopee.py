@@ -36,9 +36,10 @@ def _sign(path: str, timestamp: int, access_token: str, partner_key: str) -> str
 class ShopeeAdapter(BaseAdapter):
     name = "shopee"
 
-    def __init__(self, demo_speed: float = 1.0):
+    def __init__(self, demo_speed: float = 1.0, session_id: str | None = None):
         self.demo_speed = demo_speed
         self._seen: set[str] = set()
+        self._session_id = session_id or settings.shopee_session_id
 
     @property
     def configured(self) -> bool:
@@ -46,7 +47,7 @@ class ShopeeAdapter(BaseAdapter):
             settings.shopee_partner_id
             and settings.shopee_partner_key
             and settings.shopee_access_token
-            and settings.shopee_session_id
+            and self._session_id
         )
 
     async def _fetch_page(self, offset: int, client: httpx.AsyncClient) -> dict:
@@ -56,13 +57,30 @@ class ShopeeAdapter(BaseAdapter):
             "timestamp": ts,
             "access_token": settings.shopee_access_token,
             "sign": _sign(API_PATH, ts, settings.shopee_access_token, settings.shopee_partner_key),
-            "session_id": settings.shopee_session_id,
+            "session_id": self._session_id,
             "offset": offset,
             "page_size": 50,
         }
         r = await client.get(f"{BASE_URL}{API_PATH}", params=params, timeout=10)
         r.raise_for_status()
         return r.json()
+
+    async def fetch_once(self) -> list[dict]:
+        """One-shot poll returning raw normalized comments (for sync /analyze path)."""
+        if not self.configured:
+            return []
+        async with httpx.AsyncClient() as client:
+            data = await self._fetch_page(offset=0, client=client)
+            out: list[dict] = []
+            for c in (data.get("response") or {}).get("list") or []:
+                out.append(
+                    {
+                        "user": str(c.get("username") or c.get("nickname") or "viewer"),
+                        "text": str(c.get("comment") or ""),
+                        "platform": "shopee",
+                    }
+                )
+            return out
 
     async def stream(self) -> AsyncIterator[BufferedComment]:
         from ..aggregator import BufferedComment
