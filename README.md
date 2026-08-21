@@ -8,7 +8,7 @@ Dual live commerce copilot for TikTok Shop + Shopee Live. Hosts with 500–5k vi
 
 ## Stack
 
-- **FE:** plain JS (no build) served by nginx - single page
+- **FE:** React 19 + Vite + Astryx Design System (`@astryxdesign/core`, `@astryxdesign/theme-neutral`) served by nginx - single page
 - **BE:** FastAPI (Python 3.11) - `POST /analyze` sync only
 - **AI:** Tier-1 small IndoBERT classifier (supporting model, baked `model/checkpoints/`) + Tier-2 Muse Spark 1.2 contributor (frozen prompt + `data/catalog.json` + `data/playbook.json` via RAG-lite). Mock fallback when no key.
 - **Infra:** `docker compose up --build` (offline judge-safe)
@@ -52,7 +52,9 @@ Source of truth: `contracts/openapi.yaml`
 ```
 contracts/openapi.yaml   API contract (frozen)
 tasks/prelim/TASK-*.md   work tickets - one per dev, agent-friendly
-frontend/public/         FE (TASK-001)
+frontend/                FE Astryx + React 19 + Vite (TASK-001)
+  src/App.jsx, main.jsx, global.css, index.html  Astryx app shell
+  public/demo_comments.jsonl  demo flood for mock judge
 backend/app/             BE + adapters + aggregator (TASK-002)
   classifier.py, coach.py  ML hooks (TASK-003)
 data/catalog.json, playbook.json, demo_comments.jsonl  frozen RAG content
