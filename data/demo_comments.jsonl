@@ -1,18 +1,800 @@
-{"user":"budi_99","text":"kak harga berapa?","platform":"tiktok","delay_ms":350}
-{"user":"sari","text":"ongkir ke medan berapa kak?","platform":"shopee","delay_ms":400}
-{"user":"andi","text":"mahal amat di sebelah 80k kak","platform":"tiktok","delay_ms":300}
-{"user":"lia","text":"bisa cod gak kak?","platform":"shopee","delay_ms":500}
-{"user":"rani","text":"spill harga dong kaos hitam","platform":"tiktok","delay_ms":320}
-{"user":"eko","text":"stok masih ada kak?","platform":"tiktok","delay_ms":420}
-{"user":"dina","text":"garansi gimana kak kalau rusak?","platform":"shopee","delay_ms":380}
-{"user":"fajar","text":"kak hrg 99k free ongkir jawa ya?","platform":"tiktok","delay_ms":300}
-{"user":"maya","text":"Mau checkout 1 kaos hitam kak","platform":"shopee","delay_ms":450}
-{"user":"rio","text":"di sebelah cuma 75k kak","platform":"tiktok","delay_ms":310}
-{"user":"nisa","text":"ongkir ke sby brp?","platform":"tiktok","delay_ms":360}
-{"user":"tono","text":"ready semua warna kak?","platform":"shopee","delay_ms":400}
-{"user":"cindy","text":"kak harga 99k dapat promo apa?","platform":"tiktok","delay_ms":330}
-{"user":"hendra","text":"cod ke jakarta bisa?","platform":"shopee","delay_ms":500}
-{"user":"yuni","text":"mahal kak, kurangin dong","platform":"tiktok","delay_ms":340}
-{"user":"bayu","text":"stok cargo sisa berapa?","platform":"tiktok","delay_ms":420}
-{"user":"lisa","text":"kak spill harga hoodie cream","platform":"shopee","delay_ms":360}
-{"user":"agus","text":"langsung checkout ya kak!","platform":"tiktok","delay_ms":400}
+{"user":"demo_001","text":"kak harga produknya berapa","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_002","text":"kak harga produknya berapa ya","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_003","text":"kak harga produknya berapa dong","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_004","text":"kak harga produknya berapa min","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_005","text":"kak harga produknya berapa kak","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_006","text":"spill harga dong min","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_007","text":"spill harga dong min ya","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_008","text":"spill harga dong min dong","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_009","text":"spill harga dong min min","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_010","text":"spill harga dong min kak","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_011","text":"ini harganya berapaan","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_012","text":"ini harganya berapaan ya","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_013","text":"ini harganya berapaan dong","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_014","text":"ini harganya berapaan min","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_015","text":"ini harganya berapaan kak","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_016","text":"boleh info harga satuannya","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_017","text":"boleh info harga satuannya ya","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_018","text":"boleh info harga satuannya dong","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_019","text":"boleh info harga satuannya min","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_020","text":"boleh info harga satuannya kak","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_021","text":"berapa duit buat satu barang","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_022","text":"berapa duit buat satu barang ya","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_023","text":"berapa duit buat satu barang dong","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_024","text":"berapa duit buat satu barang min","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_025","text":"berapa duit buat satu barang kak","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_026","text":"banderolnya berapa ya","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_027","text":"banderolnya berapa ya ya","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_028","text":"banderolnya berapa ya dong","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_029","text":"banderolnya berapa ya min","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_030","text":"banderolnya berapa ya kak","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_031","text":"kalau beli satu kena berapa","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_032","text":"kalau beli satu kena berapa ya","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_033","text":"kalau beli satu kena berapa dong","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_034","text":"kalau beli satu kena berapa min","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_035","text":"kalau beli satu kena berapa kak","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_036","text":"budget yang perlu disiapkan berapa","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_037","text":"budget yang perlu disiapkan berapa ya","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_038","text":"budget yang perlu disiapkan berapa dong","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_039","text":"budget yang perlu disiapkan berapa min","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_040","text":"budget yang perlu disiapkan berapa kak","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_041","text":"seratus ribu dapat berapa pcs","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_042","text":"seratus ribu dapat berapa pcs ya","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_043","text":"seratus ribu dapat berapa pcs dong","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_044","text":"seratus ribu dapat berapa pcs min","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_045","text":"seratus ribu dapat berapa pcs kak","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_046","text":"nominal di keranjang sudah benar belum","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_047","text":"nominal di keranjang sudah benar belum ya","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_048","text":"nominal di keranjang sudah benar belum dong","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_049","text":"nominal di keranjang sudah benar belum min","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_050","text":"nominal di keranjang sudah benar belum kak","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_051","text":"harga live hari ini berapa","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_052","text":"harga live hari ini berapa ya","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_053","text":"harga live hari ini berapa dong","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_054","text":"harga live hari ini berapa min","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_055","text":"harga live hari ini berapa kak","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_056","text":"ada harga khusus pas live tidak","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_057","text":"ada harga khusus pas live tidak ya","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_058","text":"ada harga khusus pas live tidak dong","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_059","text":"ada harga khusus pas live tidak min","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_060","text":"ada harga khusus pas live tidak kak","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_061","text":"minta rincian harga produknya","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_062","text":"minta rincian harga produknya ya","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_063","text":"minta rincian harga produknya dong","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_064","text":"minta rincian harga produknya min","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_065","text":"minta rincian harga produknya kak","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_066","text":"berapa yang harus dibayar untuk item ini","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_067","text":"berapa yang harus dibayar untuk item ini ya","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_068","text":"berapa yang harus dibayar untuk item ini dong","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_069","text":"berapa yang harus dibayar untuk item ini min","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_070","text":"berapa yang harus dibayar untuk item ini kak","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_071","text":"uang segitu dapat satu atau dua","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_072","text":"uang segitu dapat satu atau dua ya","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_073","text":"uang segitu dapat satu atau dua dong","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_074","text":"uang segitu dapat satu atau dua min","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_075","text":"uang segitu dapat satu atau dua kak","platform":"tiktok","delay_ms":400,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_076","text":"di layar belum kelihatan harganya","platform":"shopee","delay_ms":440,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_077","text":"di layar belum kelihatan harganya ya","platform":"tiktok","delay_ms":480,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_078","text":"di layar belum kelihatan harganya dong","platform":"shopee","delay_ms":280,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_079","text":"di layar belum kelihatan harganya min","platform":"tiktok","delay_ms":320,"label":"harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_080","text":"di layar belum kelihatan harganya kak","platform":"shopee","delay_ms":360,"label":"harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_081","text":"berapa kak aku mau hitung budget","platform":"tiktok","delay_ms":400,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_082","text":"berapa kak aku mau hitung budget ya","platform":"shopee","delay_ms":440,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_083","text":"berapa kak aku mau hitung budget dong","platform":"tiktok","delay_ms":480,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_084","text":"berapa kak aku mau hitung budget min","platform":"shopee","delay_ms":280,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_085","text":"berapa kak aku mau hitung budget kak","platform":"tiktok","delay_ms":320,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_086","text":"nilai barang ini berapa ya","platform":"shopee","delay_ms":360,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_087","text":"nilai barang ini berapa ya ya","platform":"tiktok","delay_ms":400,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_088","text":"nilai barang ini berapa ya dong","platform":"shopee","delay_ms":440,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_089","text":"nilai barang ini berapa ya min","platform":"tiktok","delay_ms":480,"label":"harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_090","text":"nilai barang ini berapa ya kak","platform":"shopee","delay_ms":280,"label":"harga","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_091","text":"cek harga varian hitam dong","platform":"tiktok","delay_ms":320,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_092","text":"cek harga varian hitam dong ya","platform":"shopee","delay_ms":360,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_093","text":"cek harga varian hitam dong dong","platform":"tiktok","delay_ms":400,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_094","text":"cek harga varian hitam dong min","platform":"shopee","delay_ms":440,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_095","text":"cek harga varian hitam dong kak","platform":"tiktok","delay_ms":480,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_096","text":"harga setelah promo jadi berapa","platform":"shopee","delay_ms":280,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_097","text":"harga setelah promo jadi berapa ya","platform":"tiktok","delay_ms":320,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_098","text":"harga setelah promo jadi berapa dong","platform":"shopee","delay_ms":360,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_099","text":"harga setelah promo jadi berapa min","platform":"tiktok","delay_ms":400,"label":"harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_100","text":"harga setelah promo jadi berapa kak","platform":"shopee","delay_ms":440,"label":"harga","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_101","text":"kok lebih mahal dari toko sebelah","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_102","text":"kok lebih mahal dari toko sebelah ya","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_103","text":"kok lebih mahal dari toko sebelah dong","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_104","text":"kok lebih mahal dari toko sebelah min","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_105","text":"kok lebih mahal dari toko sebelah kak","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_106","text":"di lapak lain harganya lebih rendah","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_107","text":"di lapak lain harganya lebih rendah ya","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_108","text":"di lapak lain harganya lebih rendah dong","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_109","text":"di lapak lain harganya lebih rendah min","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_110","text":"di lapak lain harganya lebih rendah kak","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_111","text":"punya tetangga cuma tujuh puluh ribu","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_112","text":"punya tetangga cuma tujuh puluh ribu ya","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_113","text":"punya tetangga cuma tujuh puluh ribu dong","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_114","text":"punya tetangga cuma tujuh puluh ribu min","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_115","text":"punya tetangga cuma tujuh puluh ribu kak","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_116","text":"kenapa selisihnya jauh sama marketplace lain","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_117","text":"kenapa selisihnya jauh sama marketplace lain ya","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_118","text":"kenapa selisihnya jauh sama marketplace lain dong","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_119","text":"kenapa selisihnya jauh sama marketplace lain min","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_120","text":"kenapa selisihnya jauh sama marketplace lain kak","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_121","text":"produk serupa di sana lebih murah","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_122","text":"produk serupa di sana lebih murah ya","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_123","text":"produk serupa di sana lebih murah dong","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_124","text":"produk serupa di sana lebih murah min","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_125","text":"produk serupa di sana lebih murah kak","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_126","text":"bisa samakan harga dengan kompetitor","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_127","text":"bisa samakan harga dengan kompetitor ya","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_128","text":"bisa samakan harga dengan kompetitor dong","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_129","text":"bisa samakan harga dengan kompetitor min","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_130","text":"bisa samakan harga dengan kompetitor kak","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_131","text":"toko lain kasih harga lebih hemat","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_132","text":"toko lain kasih harga lebih hemat ya","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_133","text":"toko lain kasih harga lebih hemat dong","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_134","text":"toko lain kasih harga lebih hemat min","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_135","text":"toko lain kasih harga lebih hemat kak","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_136","text":"aku lihat penjual sebelah diskonnya lebih besar","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_137","text":"aku lihat penjual sebelah diskonnya lebih besar ya","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_138","text":"aku lihat penjual sebelah diskonnya lebih besar dong","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_139","text":"aku lihat penjual sebelah diskonnya lebih besar min","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_140","text":"aku lihat penjual sebelah diskonnya lebih besar kak","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_141","text":"bedanya apa dengan yang separuh harga","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_142","text":"bedanya apa dengan yang separuh harga ya","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_143","text":"bedanya apa dengan yang separuh harga dong","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_144","text":"bedanya apa dengan yang separuh harga min","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_145","text":"bedanya apa dengan yang separuh harga kak","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_146","text":"kalau dibanding merek sebelah ini kemahalan","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_147","text":"kalau dibanding merek sebelah ini kemahalan ya","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_148","text":"kalau dibanding merek sebelah ini kemahalan dong","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_149","text":"kalau dibanding merek sebelah ini kemahalan min","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_150","text":"kalau dibanding merek sebelah ini kemahalan kak","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_151","text":"di tiktok shop lain dapat harga lebih kecil","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_152","text":"di tiktok shop lain dapat harga lebih kecil ya","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_153","text":"di tiktok shop lain dapat harga lebih kecil dong","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_154","text":"di tiktok shop lain dapat harga lebih kecil min","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_155","text":"di tiktok shop lain dapat harga lebih kecil kak","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_156","text":"shopee sebelah jual di bawah ini","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_157","text":"shopee sebelah jual di bawah ini ya","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_158","text":"shopee sebelah jual di bawah ini dong","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_159","text":"shopee sebelah jual di bawah ini min","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_160","text":"shopee sebelah jual di bawah ini kak","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_161","text":"kenapa harus pilih ini kalau yang lain lebih hemat","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_162","text":"kenapa harus pilih ini kalau yang lain lebih hemat ya","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_163","text":"kenapa harus pilih ini kalau yang lain lebih hemat dong","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_164","text":"kenapa harus pilih ini kalau yang lain lebih hemat min","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_165","text":"kenapa harus pilih ini kalau yang lain lebih hemat kak","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_166","text":"boleh price match dengan lapak satunya","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_167","text":"boleh price match dengan lapak satunya ya","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_168","text":"boleh price match dengan lapak satunya dong","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_169","text":"boleh price match dengan lapak satunya min","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_170","text":"boleh price match dengan lapak satunya kak","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_171","text":"selisih harga sama toko lain berapa","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_172","text":"selisih harga sama toko lain berapa ya","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_173","text":"selisih harga sama toko lain berapa dong","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_174","text":"selisih harga sama toko lain berapa min","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_175","text":"selisih harga sama toko lain berapa kak","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_176","text":"yang serupa ada dengan nominal lebih rendah","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_177","text":"yang serupa ada dengan nominal lebih rendah ya","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_178","text":"yang serupa ada dengan nominal lebih rendah dong","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_179","text":"yang serupa ada dengan nominal lebih rendah min","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_180","text":"yang serupa ada dengan nominal lebih rendah kak","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_181","text":"lapak sebelah kasih bonus di harga yang sama","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_182","text":"lapak sebelah kasih bonus di harga yang sama ya","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_183","text":"lapak sebelah kasih bonus di harga yang sama dong","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_184","text":"lapak sebelah kasih bonus di harga yang sama min","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_185","text":"lapak sebelah kasih bonus di harga yang sama kak","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_186","text":"kompetitor jual paket dua dengan nominal segini","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_187","text":"kompetitor jual paket dua dengan nominal segini ya","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_188","text":"kompetitor jual paket dua dengan nominal segini dong","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_189","text":"kompetitor jual paket dua dengan nominal segini min","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_190","text":"kompetitor jual paket dua dengan nominal segini kak","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_191","text":"aku sedang membandingkan dengan produk lain","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_192","text":"aku sedang membandingkan dengan produk lain ya","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_193","text":"aku sedang membandingkan dengan produk lain dong","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_194","text":"aku sedang membandingkan dengan produk lain min","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_195","text":"aku sedang membandingkan dengan produk lain kak","platform":"tiktok","delay_ms":400,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_196","text":"lebih untung beli ini atau produk sebelah","platform":"shopee","delay_ms":440,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_197","text":"lebih untung beli ini atau produk sebelah ya","platform":"tiktok","delay_ms":480,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_198","text":"lebih untung beli ini atau produk sebelah dong","platform":"shopee","delay_ms":280,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_199","text":"lebih untung beli ini atau produk sebelah min","platform":"tiktok","delay_ms":320,"label":"bandingkan_harga","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_200","text":"lebih untung beli ini atau produk sebelah kak","platform":"shopee","delay_ms":360,"label":"bandingkan_harga","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_201","text":"ongkir ke medan berapa kak","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_202","text":"ongkir ke medan berapa kak ya","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_203","text":"ongkir ke medan berapa kak dong","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_204","text":"ongkir ke medan berapa kak min","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_205","text":"ongkir ke medan berapa kak kak","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_206","text":"biaya kirim menuju bandung berapa","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_207","text":"biaya kirim menuju bandung berapa ya","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_208","text":"biaya kirim menuju bandung berapa dong","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_209","text":"biaya kirim menuju bandung berapa min","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_210","text":"biaya kirim menuju bandung berapa kak","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_211","text":"ada gratis ongkos pengiriman tidak","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_212","text":"ada gratis ongkos pengiriman tidak ya","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_213","text":"ada gratis ongkos pengiriman tidak dong","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_214","text":"ada gratis ongkos pengiriman tidak min","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_215","text":"ada gratis ongkos pengiriman tidak kak","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_216","text":"kirim ke luar jawa tambah berapa","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_217","text":"kirim ke luar jawa tambah berapa ya","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_218","text":"kirim ke luar jawa tambah berapa dong","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_219","text":"kirim ke luar jawa tambah berapa min","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_220","text":"kirim ke luar jawa tambah berapa kak","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_221","text":"berapa biaya antar ke rumah saya","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_222","text":"berapa biaya antar ke rumah saya ya","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_223","text":"berapa biaya antar ke rumah saya dong","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_224","text":"berapa biaya antar ke rumah saya min","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_225","text":"berapa biaya antar ke rumah saya kak","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_226","text":"tujuan makassar kena biaya kirim berapa","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_227","text":"tujuan makassar kena biaya kirim berapa ya","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_228","text":"tujuan makassar kena biaya kirim berapa dong","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_229","text":"tujuan makassar kena biaya kirim berapa min","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_230","text":"tujuan makassar kena biaya kirim berapa kak","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_231","text":"free ongkirnya berlaku ke daerah mana","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_232","text":"free ongkirnya berlaku ke daerah mana ya","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_233","text":"free ongkirnya berlaku ke daerah mana dong","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_234","text":"free ongkirnya berlaku ke daerah mana min","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_235","text":"free ongkirnya berlaku ke daerah mana kak","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_236","text":"pengiriman ke pontianak mahal tidak","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_237","text":"pengiriman ke pontianak mahal tidak ya","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_238","text":"pengiriman ke pontianak mahal tidak dong","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_239","text":"pengiriman ke pontianak mahal tidak min","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_240","text":"pengiriman ke pontianak mahal tidak kak","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_241","text":"cek tarif kirim ke surabaya dong","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_242","text":"cek tarif kirim ke surabaya dong ya","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_243","text":"cek tarif kirim ke surabaya dong dong","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_244","text":"cek tarif kirim ke surabaya dong min","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_245","text":"cek tarif kirim ke surabaya dong kak","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_246","text":"kalau alamatnya pelosok ada tambahan kirim","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_247","text":"kalau alamatnya pelosok ada tambahan kirim ya","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_248","text":"kalau alamatnya pelosok ada tambahan kirim dong","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_249","text":"kalau alamatnya pelosok ada tambahan kirim min","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_250","text":"kalau alamatnya pelosok ada tambahan kirim kak","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_251","text":"voucher bebas ongkos kirim bisa dipakai","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_252","text":"voucher bebas ongkos kirim bisa dipakai ya","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_253","text":"voucher bebas ongkos kirim bisa dipakai dong","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_254","text":"voucher bebas ongkos kirim bisa dipakai min","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_255","text":"voucher bebas ongkos kirim bisa dipakai kak","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_256","text":"ongkos ekspedisinya ditanggung pembeli ya","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_257","text":"ongkos ekspedisinya ditanggung pembeli ya ya","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_258","text":"ongkos ekspedisinya ditanggung pembeli ya dong","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_259","text":"ongkos ekspedisinya ditanggung pembeli ya min","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_260","text":"ongkos ekspedisinya ditanggung pembeli ya kak","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_261","text":"kirim ke solo habis berapa","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_262","text":"kirim ke solo habis berapa ya","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_263","text":"kirim ke solo habis berapa dong","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_264","text":"kirim ke solo habis berapa min","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_265","text":"kirim ke solo habis berapa kak","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_266","text":"biaya pengantaran belum masuk harga ya","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_267","text":"biaya pengantaran belum masuk harga ya ya","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_268","text":"biaya pengantaran belum masuk harga ya dong","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_269","text":"biaya pengantaran belum masuk harga ya min","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_270","text":"biaya pengantaran belum masuk harga ya kak","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_271","text":"ada subsidi pengiriman saat live","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_272","text":"ada subsidi pengiriman saat live ya","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_273","text":"ada subsidi pengiriman saat live dong","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_274","text":"ada subsidi pengiriman saat live min","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_275","text":"ada subsidi pengiriman saat live kak","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_276","text":"alamat luar kota dapat gratis kirim juga","platform":"shopee","delay_ms":280,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_277","text":"alamat luar kota dapat gratis kirim juga ya","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_278","text":"alamat luar kota dapat gratis kirim juga dong","platform":"shopee","delay_ms":360,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_279","text":"alamat luar kota dapat gratis kirim juga min","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_280","text":"alamat luar kota dapat gratis kirim juga kak","platform":"shopee","delay_ms":440,"label":"ongkir","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_281","text":"tolong hitung tarif ekspedisi ke bali","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_282","text":"tolong hitung tarif ekspedisi ke bali ya","platform":"shopee","delay_ms":280,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_283","text":"tolong hitung tarif ekspedisi ke bali dong","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_284","text":"tolong hitung tarif ekspedisi ke bali min","platform":"shopee","delay_ms":360,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_285","text":"tolong hitung tarif ekspedisi ke bali kak","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_286","text":"pengiriman antarpulau ada biaya tambahan","platform":"shopee","delay_ms":440,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_287","text":"pengiriman antarpulau ada biaya tambahan ya","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_288","text":"pengiriman antarpulau ada biaya tambahan dong","platform":"shopee","delay_ms":280,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_289","text":"pengiriman antarpulau ada biaya tambahan min","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_290","text":"pengiriman antarpulau ada biaya tambahan kak","platform":"shopee","delay_ms":360,"label":"ongkir","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_291","text":"berapa ongkos sampai ke alamat pembeli","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_292","text":"berapa ongkos sampai ke alamat pembeli ya","platform":"shopee","delay_ms":440,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_293","text":"berapa ongkos sampai ke alamat pembeli dong","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_294","text":"berapa ongkos sampai ke alamat pembeli min","platform":"shopee","delay_ms":280,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_295","text":"berapa ongkos sampai ke alamat pembeli kak","platform":"tiktok","delay_ms":320,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_296","text":"promo kirim gratis minimal belanja berapa","platform":"shopee","delay_ms":360,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_297","text":"promo kirim gratis minimal belanja berapa ya","platform":"tiktok","delay_ms":400,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_298","text":"promo kirim gratis minimal belanja berapa dong","platform":"shopee","delay_ms":440,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_299","text":"promo kirim gratis minimal belanja berapa min","platform":"tiktok","delay_ms":480,"label":"ongkir","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_300","text":"promo kirim gratis minimal belanja berapa kak","platform":"shopee","delay_ms":280,"label":"ongkir","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_301","text":"bisa cod tidak kak","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_302","text":"bisa cod tidak kak ya","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_303","text":"bisa cod tidak kak dong","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_304","text":"bisa cod tidak kak min","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_305","text":"bisa cod tidak kak kak","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_306","text":"boleh bayar saat barang datang","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_307","text":"boleh bayar saat barang datang ya","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_308","text":"boleh bayar saat barang datang dong","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_309","text":"boleh bayar saat barang datang min","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_310","text":"boleh bayar saat barang datang kak","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_311","text":"ada pembayaran di tempat tidak","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_312","text":"ada pembayaran di tempat tidak ya","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_313","text":"ada pembayaran di tempat tidak dong","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_314","text":"ada pembayaran di tempat tidak min","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_315","text":"ada pembayaran di tempat tidak kak","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_316","text":"aku mau lunasi ketika paket sampai","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_317","text":"aku mau lunasi ketika paket sampai ya","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_318","text":"aku mau lunasi ketika paket sampai dong","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_319","text":"aku mau lunasi ketika paket sampai min","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_320","text":"aku mau lunasi ketika paket sampai kak","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_321","text":"kurir bisa terima uang tunai","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_322","text":"kurir bisa terima uang tunai ya","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_323","text":"kurir bisa terima uang tunai dong","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_324","text":"kurir bisa terima uang tunai min","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_325","text":"kurir bisa terima uang tunai kak","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_326","text":"opsi bayar di rumah tersedia ya","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_327","text":"opsi bayar di rumah tersedia ya ya","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_328","text":"opsi bayar di rumah tersedia ya dong","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_329","text":"opsi bayar di rumah tersedia ya min","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_330","text":"opsi bayar di rumah tersedia ya kak","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_331","text":"kalau tidak punya m banking bisa bayar ke kurir","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_332","text":"kalau tidak punya m banking bisa bayar ke kurir ya","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_333","text":"kalau tidak punya m banking bisa bayar ke kurir dong","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_334","text":"kalau tidak punya m banking bisa bayar ke kurir min","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_335","text":"kalau tidak punya m banking bisa bayar ke kurir kak","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_336","text":"metode cod berlaku untuk daerahku","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_337","text":"metode cod berlaku untuk daerahku ya","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_338","text":"metode cod berlaku untuk daerahku dong","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_339","text":"metode cod berlaku untuk daerahku min","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_340","text":"metode cod berlaku untuk daerahku kak","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_341","text":"pesan sekarang bayarnya nanti saat diterima bisa","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_342","text":"pesan sekarang bayarnya nanti saat diterima bisa ya","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_343","text":"pesan sekarang bayarnya nanti saat diterima bisa dong","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_344","text":"pesan sekarang bayarnya nanti saat diterima bisa min","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_345","text":"pesan sekarang bayarnya nanti saat diterima bisa kak","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_346","text":"aku pilih pembayaran waktu paket tiba","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_347","text":"aku pilih pembayaran waktu paket tiba ya","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_348","text":"aku pilih pembayaran waktu paket tiba dong","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_349","text":"aku pilih pembayaran waktu paket tiba min","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_350","text":"aku pilih pembayaran waktu paket tiba kak","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_351","text":"bisa cash on delivery ke bandung","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_352","text":"bisa cash on delivery ke bandung ya","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_353","text":"bisa cash on delivery ke bandung dong","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_354","text":"bisa cash on delivery ke bandung min","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_355","text":"bisa cash on delivery ke bandung kak","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_356","text":"cara aktifkan bayar di tempat bagaimana","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_357","text":"cara aktifkan bayar di tempat bagaimana ya","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_358","text":"cara aktifkan bayar di tempat bagaimana dong","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_359","text":"cara aktifkan bayar di tempat bagaimana min","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_360","text":"cara aktifkan bayar di tempat bagaimana kak","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_361","text":"kenapa pilihan cod tidak muncul","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_362","text":"kenapa pilihan cod tidak muncul ya","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_363","text":"kenapa pilihan cod tidak muncul dong","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_364","text":"kenapa pilihan cod tidak muncul min","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_365","text":"kenapa pilihan cod tidak muncul kak","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_366","text":"cod ada biaya penanganan tambahan tidak","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_367","text":"cod ada biaya penanganan tambahan tidak ya","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_368","text":"cod ada biaya penanganan tambahan tidak dong","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_369","text":"cod ada biaya penanganan tambahan tidak min","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_370","text":"cod ada biaya penanganan tambahan tidak kak","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_371","text":"semua varian mendukung bayar di lokasi","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_372","text":"semua varian mendukung bayar di lokasi ya","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_373","text":"semua varian mendukung bayar di lokasi dong","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_374","text":"semua varian mendukung bayar di lokasi min","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_375","text":"semua varian mendukung bayar di lokasi kak","platform":"tiktok","delay_ms":400,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_376","text":"mau transaksi tunai lewat kurir","platform":"shopee","delay_ms":440,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_377","text":"mau transaksi tunai lewat kurir ya","platform":"tiktok","delay_ms":480,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_378","text":"mau transaksi tunai lewat kurir dong","platform":"shopee","delay_ms":280,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_379","text":"mau transaksi tunai lewat kurir min","platform":"tiktok","delay_ms":320,"label":"cod","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_380","text":"mau transaksi tunai lewat kurir kak","platform":"shopee","delay_ms":360,"label":"cod","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_381","text":"paketnya boleh dibayar setelah sampai","platform":"tiktok","delay_ms":400,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_382","text":"paketnya boleh dibayar setelah sampai ya","platform":"shopee","delay_ms":440,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_383","text":"paketnya boleh dibayar setelah sampai dong","platform":"tiktok","delay_ms":480,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_384","text":"paketnya boleh dibayar setelah sampai min","platform":"shopee","delay_ms":280,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_385","text":"paketnya boleh dibayar setelah sampai kak","platform":"tiktok","delay_ms":320,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_386","text":"pembayaran langsung ke pengantar tersedia","platform":"shopee","delay_ms":360,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_387","text":"pembayaran langsung ke pengantar tersedia ya","platform":"tiktok","delay_ms":400,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_388","text":"pembayaran langsung ke pengantar tersedia dong","platform":"shopee","delay_ms":440,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_389","text":"pembayaran langsung ke pengantar tersedia min","platform":"tiktok","delay_ms":480,"label":"cod","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_390","text":"pembayaran langsung ke pengantar tersedia kak","platform":"shopee","delay_ms":280,"label":"cod","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_391","text":"wilayah luar jawa bisa cod juga","platform":"tiktok","delay_ms":320,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_392","text":"wilayah luar jawa bisa cod juga ya","platform":"shopee","delay_ms":360,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_393","text":"wilayah luar jawa bisa cod juga dong","platform":"tiktok","delay_ms":400,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_394","text":"wilayah luar jawa bisa cod juga min","platform":"shopee","delay_ms":440,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_395","text":"wilayah luar jawa bisa cod juga kak","platform":"tiktok","delay_ms":480,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_396","text":"kalau cod boleh cek barang dulu tidak","platform":"shopee","delay_ms":280,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_397","text":"kalau cod boleh cek barang dulu tidak ya","platform":"tiktok","delay_ms":320,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_398","text":"kalau cod boleh cek barang dulu tidak dong","platform":"shopee","delay_ms":360,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_399","text":"kalau cod boleh cek barang dulu tidak min","platform":"tiktok","delay_ms":400,"label":"cod","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_400","text":"kalau cod boleh cek barang dulu tidak kak","platform":"shopee","delay_ms":440,"label":"cod","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_401","text":"garansinya berapa lama kak","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_402","text":"garansinya berapa lama kak ya","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_403","text":"garansinya berapa lama kak dong","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_404","text":"garansinya berapa lama kak min","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_405","text":"garansinya berapa lama kak kak","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_406","text":"kalau barang rusak bisa retur","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_407","text":"kalau barang rusak bisa retur ya","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_408","text":"kalau barang rusak bisa retur dong","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_409","text":"kalau barang rusak bisa retur min","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_410","text":"kalau barang rusak bisa retur kak","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_411","text":"ada jaminan produk asli tidak","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_412","text":"ada jaminan produk asli tidak ya","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_413","text":"ada jaminan produk asli tidak dong","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_414","text":"ada jaminan produk asli tidak min","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_415","text":"ada jaminan produk asli tidak kak","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_416","text":"produk cacat dapat ditukar ya","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_417","text":"produk cacat dapat ditukar ya ya","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_418","text":"produk cacat dapat ditukar ya dong","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_419","text":"produk cacat dapat ditukar ya min","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_420","text":"produk cacat dapat ditukar ya kak","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_421","text":"bagaimana klaim kalau tidak berfungsi","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_422","text":"bagaimana klaim kalau tidak berfungsi ya","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_423","text":"bagaimana klaim kalau tidak berfungsi dong","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_424","text":"bagaimana klaim kalau tidak berfungsi min","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_425","text":"bagaimana klaim kalau tidak berfungsi kak","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_426","text":"ada perlindungan setelah pembelian","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_427","text":"ada perlindungan setelah pembelian ya","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_428","text":"ada perlindungan setelah pembelian dong","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_429","text":"ada perlindungan setelah pembelian min","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_430","text":"ada perlindungan setelah pembelian kak","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_431","text":"kalau ukuran salah boleh tukar","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_432","text":"kalau ukuran salah boleh tukar ya","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_433","text":"kalau ukuran salah boleh tukar dong","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_434","text":"kalau ukuran salah boleh tukar min","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_435","text":"kalau ukuran salah boleh tukar kak","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_436","text":"jaminan uang kembali berlaku tidak","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_437","text":"jaminan uang kembali berlaku tidak ya","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_438","text":"jaminan uang kembali berlaku tidak dong","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_439","text":"jaminan uang kembali berlaku tidak min","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_440","text":"jaminan uang kembali berlaku tidak kak","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_441","text":"masa perlindungan produknya sampai kapan","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_442","text":"masa perlindungan produknya sampai kapan ya","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_443","text":"masa perlindungan produknya sampai kapan dong","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_444","text":"masa perlindungan produknya sampai kapan min","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_445","text":"masa perlindungan produknya sampai kapan kak","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_446","text":"barang pecah saat dikirim tanggung jawab siapa","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_447","text":"barang pecah saat dikirim tanggung jawab siapa ya","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_448","text":"barang pecah saat dikirim tanggung jawab siapa dong","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_449","text":"barang pecah saat dikirim tanggung jawab siapa min","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_450","text":"barang pecah saat dikirim tanggung jawab siapa kak","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_451","text":"proses pengembalian produk bagaimana","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_452","text":"proses pengembalian produk bagaimana ya","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_453","text":"proses pengembalian produk bagaimana dong","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_454","text":"proses pengembalian produk bagaimana min","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_455","text":"proses pengembalian produk bagaimana kak","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_456","text":"kalau warna keliru bisa diganti","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_457","text":"kalau warna keliru bisa diganti ya","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_458","text":"kalau warna keliru bisa diganti dong","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_459","text":"kalau warna keliru bisa diganti min","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_460","text":"kalau warna keliru bisa diganti kak","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_461","text":"ada kartu garansi dalam paket","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_462","text":"ada kartu garansi dalam paket ya","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_463","text":"ada kartu garansi dalam paket dong","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_464","text":"ada kartu garansi dalam paket min","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_465","text":"ada kartu garansi dalam paket kak","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_466","text":"kerusakan pabrik ditanggung toko tidak","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_467","text":"kerusakan pabrik ditanggung toko tidak ya","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_468","text":"kerusakan pabrik ditanggung toko tidak dong","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_469","text":"kerusakan pabrik ditanggung toko tidak min","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_470","text":"kerusakan pabrik ditanggung toko tidak kak","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_471","text":"berapa hari batas pengajuan retur","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_472","text":"berapa hari batas pengajuan retur ya","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_473","text":"berapa hari batas pengajuan retur dong","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_474","text":"berapa hari batas pengajuan retur min","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_475","text":"berapa hari batas pengajuan retur kak","platform":"tiktok","delay_ms":320,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_476","text":"produk ini dijamin original ya","platform":"shopee","delay_ms":360,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_477","text":"produk ini dijamin original ya ya","platform":"tiktok","delay_ms":400,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_478","text":"produk ini dijamin original ya dong","platform":"shopee","delay_ms":440,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_479","text":"produk ini dijamin original ya min","platform":"tiktok","delay_ms":480,"label":"garansi","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_480","text":"produk ini dijamin original ya kak","platform":"shopee","delay_ms":280,"label":"garansi","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_481","text":"kalau tidak cocok bisa kembalikan","platform":"tiktok","delay_ms":320,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_482","text":"kalau tidak cocok bisa kembalikan ya","platform":"shopee","delay_ms":360,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_483","text":"kalau tidak cocok bisa kembalikan dong","platform":"tiktok","delay_ms":400,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_484","text":"kalau tidak cocok bisa kembalikan min","platform":"shopee","delay_ms":440,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_485","text":"kalau tidak cocok bisa kembalikan kak","platform":"tiktok","delay_ms":480,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_486","text":"syarat tukar barang apa saja","platform":"shopee","delay_ms":280,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_487","text":"syarat tukar barang apa saja ya","platform":"tiktok","delay_ms":320,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_488","text":"syarat tukar barang apa saja dong","platform":"shopee","delay_ms":360,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_489","text":"syarat tukar barang apa saja min","platform":"tiktok","delay_ms":400,"label":"garansi","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_490","text":"syarat tukar barang apa saja kak","platform":"shopee","delay_ms":440,"label":"garansi","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_491","text":"jaminan servisnya berlaku di mana","platform":"tiktok","delay_ms":480,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_492","text":"jaminan servisnya berlaku di mana ya","platform":"shopee","delay_ms":280,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_493","text":"jaminan servisnya berlaku di mana dong","platform":"tiktok","delay_ms":320,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_494","text":"jaminan servisnya berlaku di mana min","platform":"shopee","delay_ms":360,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_495","text":"jaminan servisnya berlaku di mana kak","platform":"tiktok","delay_ms":400,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_496","text":"apakah ada garansi resmi merek","platform":"shopee","delay_ms":440,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_497","text":"apakah ada garansi resmi merek ya","platform":"tiktok","delay_ms":480,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_498","text":"apakah ada garansi resmi merek dong","platform":"shopee","delay_ms":280,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_499","text":"apakah ada garansi resmi merek min","platform":"tiktok","delay_ms":320,"label":"garansi","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_500","text":"apakah ada garansi resmi merek kak","platform":"shopee","delay_ms":360,"label":"garansi","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_501","text":"stoknya masih ada kak","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_502","text":"stoknya masih ada kak ya","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_503","text":"stoknya masih ada kak dong","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_504","text":"stoknya masih ada kak min","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_505","text":"stoknya masih ada kak kak","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_506","text":"warna hitam ready tidak","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_507","text":"warna hitam ready tidak ya","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_508","text":"warna hitam ready tidak dong","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_509","text":"warna hitam ready tidak min","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_510","text":"warna hitam ready tidak kak","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_511","text":"barang ini tersedia sekarang","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_512","text":"barang ini tersedia sekarang ya","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_513","text":"barang ini tersedia sekarang dong","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_514","text":"barang ini tersedia sekarang min","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_515","text":"barang ini tersedia sekarang kak","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_516","text":"ukuran besar masih kebagian tidak","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_517","text":"ukuran besar masih kebagian tidak ya","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_518","text":"ukuran besar masih kebagian tidak dong","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_519","text":"ukuran besar masih kebagian tidak min","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_520","text":"ukuran besar masih kebagian tidak kak","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_521","text":"kapan varian biru tersedia lagi","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_522","text":"kapan varian biru tersedia lagi ya","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_523","text":"kapan varian biru tersedia lagi dong","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_524","text":"kapan varian biru tersedia lagi min","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_525","text":"kapan varian biru tersedia lagi kak","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_526","text":"persediaannya tinggal berapa","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_527","text":"persediaannya tinggal berapa ya","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_528","text":"persediaannya tinggal berapa dong","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_529","text":"persediaannya tinggal berapa min","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_530","text":"persediaannya tinggal berapa kak","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_531","text":"semua ukuran masih lengkap","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_532","text":"semua ukuran masih lengkap ya","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_533","text":"semua ukuran masih lengkap dong","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_534","text":"semua ukuran masih lengkap min","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_535","text":"semua ukuran masih lengkap kak","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_536","text":"yang motif polos sudah habis ya","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_537","text":"yang motif polos sudah habis ya ya","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_538","text":"yang motif polos sudah habis ya dong","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_539","text":"yang motif polos sudah habis ya min","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_540","text":"yang motif polos sudah habis ya kak","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_541","text":"restock lagi tanggal berapa","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_542","text":"restock lagi tanggal berapa ya","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_543","text":"restock lagi tanggal berapa dong","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_544","text":"restock lagi tanggal berapa min","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_545","text":"restock lagi tanggal berapa kak","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_546","text":"masih bisa pesan varian merah","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_547","text":"masih bisa pesan varian merah ya","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_548","text":"masih bisa pesan varian merah dong","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_549","text":"masih bisa pesan varian merah min","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_550","text":"masih bisa pesan varian merah kak","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_551","text":"item di etalase masih tersedia","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_552","text":"item di etalase masih tersedia ya","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_553","text":"item di etalase masih tersedia dong","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_554","text":"item di etalase masih tersedia min","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_555","text":"item di etalase masih tersedia kak","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_556","text":"jumlah barangnya masih banyak tidak","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_557","text":"jumlah barangnya masih banyak tidak ya","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_558","text":"jumlah barangnya masih banyak tidak dong","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_559","text":"jumlah barangnya masih banyak tidak min","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_560","text":"jumlah barangnya masih banyak tidak kak","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_561","text":"aku takut kehabisan produknya","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_562","text":"aku takut kehabisan produknya ya","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_563","text":"aku takut kehabisan produknya dong","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_564","text":"aku takut kehabisan produknya min","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_565","text":"aku takut kehabisan produknya kak","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_566","text":"size xl masih dapat tidak","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_567","text":"size xl masih dapat tidak ya","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_568","text":"size xl masih dapat tidak dong","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_569","text":"size xl masih dapat tidak min","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_570","text":"size xl masih dapat tidak kak","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_571","text":"persediaan warna putih aman kak","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_572","text":"persediaan warna putih aman kak ya","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_573","text":"persediaan warna putih aman kak dong","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_574","text":"persediaan warna putih aman kak min","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_575","text":"persediaan warna putih aman kak kak","platform":"tiktok","delay_ms":480,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_576","text":"yang dipakai host masih ada barangnya","platform":"shopee","delay_ms":280,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_577","text":"yang dipakai host masih ada barangnya ya","platform":"tiktok","delay_ms":320,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_578","text":"yang dipakai host masih ada barangnya dong","platform":"shopee","delay_ms":360,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_579","text":"yang dipakai host masih ada barangnya min","platform":"tiktok","delay_ms":400,"label":"stok","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_580","text":"yang dipakai host masih ada barangnya kak","platform":"shopee","delay_ms":440,"label":"stok","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_581","text":"varian ini kosong atau tersedia","platform":"tiktok","delay_ms":480,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_582","text":"varian ini kosong atau tersedia ya","platform":"shopee","delay_ms":280,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_583","text":"varian ini kosong atau tersedia dong","platform":"tiktok","delay_ms":320,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_584","text":"varian ini kosong atau tersedia min","platform":"shopee","delay_ms":360,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_585","text":"varian ini kosong atau tersedia kak","platform":"tiktok","delay_ms":400,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_586","text":"kapan kiriman stok berikutnya datang","platform":"shopee","delay_ms":440,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_587","text":"kapan kiriman stok berikutnya datang ya","platform":"tiktok","delay_ms":480,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_588","text":"kapan kiriman stok berikutnya datang dong","platform":"shopee","delay_ms":280,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_589","text":"kapan kiriman stok berikutnya datang min","platform":"tiktok","delay_ms":320,"label":"stok","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_590","text":"kapan kiriman stok berikutnya datang kak","platform":"shopee","delay_ms":360,"label":"stok","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_591","text":"masih tersisa untuk pembeli sekarang","platform":"tiktok","delay_ms":400,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_592","text":"masih tersisa untuk pembeli sekarang ya","platform":"shopee","delay_ms":440,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_593","text":"masih tersisa untuk pembeli sekarang dong","platform":"tiktok","delay_ms":480,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_594","text":"masih tersisa untuk pembeli sekarang min","platform":"shopee","delay_ms":280,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_595","text":"masih tersisa untuk pembeli sekarang kak","platform":"tiktok","delay_ms":320,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_596","text":"boleh cek ketersediaan ukuran medium","platform":"shopee","delay_ms":360,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_597","text":"boleh cek ketersediaan ukuran medium ya","platform":"tiktok","delay_ms":400,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_598","text":"boleh cek ketersediaan ukuran medium dong","platform":"shopee","delay_ms":440,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_599","text":"boleh cek ketersediaan ukuran medium min","platform":"tiktok","delay_ms":480,"label":"stok","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_600","text":"boleh cek ketersediaan ukuran medium kak","platform":"shopee","delay_ms":280,"label":"stok","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_601","text":"aku mau checkout satu kak","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_602","text":"aku mau checkout satu kak ya","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_603","text":"aku mau checkout satu kak dong","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_604","text":"aku mau checkout satu kak min","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_605","text":"aku mau checkout satu kak kak","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_606","text":"langsung co sekarang ya","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_607","text":"langsung co sekarang ya ya","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_608","text":"langsung co sekarang ya dong","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_609","text":"langsung co sekarang ya min","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_610","text":"langsung co sekarang ya kak","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_611","text":"mau beli varian hitam","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_612","text":"mau beli varian hitam ya","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_613","text":"mau beli varian hitam dong","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_614","text":"mau beli varian hitam min","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_615","text":"mau beli varian hitam kak","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_616","text":"tolong sisihkan dua untuk aku","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_617","text":"tolong sisihkan dua untuk aku ya","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_618","text":"tolong sisihkan dua untuk aku dong","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_619","text":"tolong sisihkan dua untuk aku min","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_620","text":"tolong sisihkan dua untuk aku kak","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_621","text":"aku ambil satu ukuran medium","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_622","text":"aku ambil satu ukuran medium ya","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_623","text":"aku ambil satu ukuran medium dong","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_624","text":"aku ambil satu ukuran medium min","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_625","text":"aku ambil satu ukuran medium kak","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_626","text":"cara pesan barang yang dipakai host","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_627","text":"cara pesan barang yang dipakai host ya","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_628","text":"cara pesan barang yang dipakai host dong","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_629","text":"cara pesan barang yang dipakai host min","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_630","text":"cara pesan barang yang dipakai host kak","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_631","text":"sudah masuk keranjang tinggal bayar","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_632","text":"sudah masuk keranjang tinggal bayar ya","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_633","text":"sudah masuk keranjang tinggal bayar dong","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_634","text":"sudah masuk keranjang tinggal bayar min","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_635","text":"sudah masuk keranjang tinggal bayar kak","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_636","text":"aku jadi order produknya","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_637","text":"aku jadi order produknya ya","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_638","text":"aku jadi order produknya dong","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_639","text":"aku jadi order produknya min","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_640","text":"aku jadi order produknya kak","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_641","text":"bantu arahkan untuk menyelesaikan pembelian","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_642","text":"bantu arahkan untuk menyelesaikan pembelian ya","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_643","text":"bantu arahkan untuk menyelesaikan pembelian dong","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_644","text":"bantu arahkan untuk menyelesaikan pembelian min","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_645","text":"bantu arahkan untuk menyelesaikan pembelian kak","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_646","text":"fix beli satu warna putih","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_647","text":"fix beli satu warna putih ya","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_648","text":"fix beli satu warna putih dong","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_649","text":"fix beli satu warna putih min","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_650","text":"fix beli satu warna putih kak","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_651","text":"aku pesan dua paket sekarang","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_652","text":"aku pesan dua paket sekarang ya","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_653","text":"aku pesan dua paket sekarang dong","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_654","text":"aku pesan dua paket sekarang min","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_655","text":"aku pesan dua paket sekarang kak","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_656","text":"langsung amankan satu buat saya","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_657","text":"langsung amankan satu buat saya ya","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_658","text":"langsung amankan satu buat saya dong","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_659","text":"langsung amankan satu buat saya min","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_660","text":"langsung amankan satu buat saya kak","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_661","text":"klik yang mana untuk membeli","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_662","text":"klik yang mana untuk membeli ya","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_663","text":"klik yang mana untuk membeli dong","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_664","text":"klik yang mana untuk membeli min","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_665","text":"klik yang mana untuk membeli kak","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_666","text":"mau lanjut ke pembayaran sekarang","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_667","text":"mau lanjut ke pembayaran sekarang ya","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_668","text":"mau lanjut ke pembayaran sekarang dong","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_669","text":"mau lanjut ke pembayaran sekarang min","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_670","text":"mau lanjut ke pembayaran sekarang kak","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_671","text":"tolong buatkan pesanan satu item","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_672","text":"tolong buatkan pesanan satu item ya","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_673","text":"tolong buatkan pesanan satu item dong","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_674","text":"tolong buatkan pesanan satu item min","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_675","text":"tolong buatkan pesanan satu item kak","platform":"tiktok","delay_ms":400,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_676","text":"aku sudah yakin mau ambil produk ini","platform":"shopee","delay_ms":440,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_677","text":"aku sudah yakin mau ambil produk ini ya","platform":"tiktok","delay_ms":480,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_678","text":"aku sudah yakin mau ambil produk ini dong","platform":"shopee","delay_ms":280,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_679","text":"aku sudah yakin mau ambil produk ini min","platform":"tiktok","delay_ms":320,"label":"checkout","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_680","text":"aku sudah yakin mau ambil produk ini kak","platform":"shopee","delay_ms":360,"label":"checkout","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_681","text":"siap transaksi untuk varian merah","platform":"tiktok","delay_ms":400,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_682","text":"siap transaksi untuk varian merah ya","platform":"shopee","delay_ms":440,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_683","text":"siap transaksi untuk varian merah dong","platform":"tiktok","delay_ms":480,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_684","text":"siap transaksi untuk varian merah min","platform":"shopee","delay_ms":280,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_685","text":"siap transaksi untuk varian merah kak","platform":"tiktok","delay_ms":320,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_686","text":"masukkan satu ke pesanan saya","platform":"shopee","delay_ms":360,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_687","text":"masukkan satu ke pesanan saya ya","platform":"tiktok","delay_ms":400,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_688","text":"masukkan satu ke pesanan saya dong","platform":"shopee","delay_ms":440,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_689","text":"masukkan satu ke pesanan saya min","platform":"tiktok","delay_ms":480,"label":"checkout","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_690","text":"masukkan satu ke pesanan saya kak","platform":"shopee","delay_ms":280,"label":"checkout","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_691","text":"aku jadi borong tiga buah","platform":"tiktok","delay_ms":320,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_692","text":"aku jadi borong tiga buah ya","platform":"shopee","delay_ms":360,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_693","text":"aku jadi borong tiga buah dong","platform":"tiktok","delay_ms":400,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_694","text":"aku jadi borong tiga buah min","platform":"shopee","delay_ms":440,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_695","text":"aku jadi borong tiga buah kak","platform":"tiktok","delay_ms":480,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_696","text":"boleh bantu checkout dari keranjang","platform":"shopee","delay_ms":280,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_697","text":"boleh bantu checkout dari keranjang ya","platform":"tiktok","delay_ms":320,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_698","text":"boleh bantu checkout dari keranjang dong","platform":"shopee","delay_ms":360,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_699","text":"boleh bantu checkout dari keranjang min","platform":"tiktok","delay_ms":400,"label":"checkout","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_700","text":"boleh bantu checkout dari keranjang kak","platform":"shopee","delay_ms":440,"label":"checkout","split":"test","review_required":true,"review_status":"pending"}
+{"user":"demo_701","text":"halo kak baru gabung live","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_702","text":"halo kak baru gabung live ya","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_703","text":"halo kak baru gabung live dong","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_704","text":"halo kak baru gabung live min","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_705","text":"halo kak baru gabung live kak","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_706","text":"produknya lucu banget","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_707","text":"produknya lucu banget ya","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_708","text":"produknya lucu banget dong","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_709","text":"produknya lucu banget min","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_710","text":"produknya lucu banget kak","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_711","text":"aku lihat lihat dulu ya","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_712","text":"aku lihat lihat dulu ya ya","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_713","text":"aku lihat lihat dulu ya dong","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_714","text":"aku lihat lihat dulu ya min","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_715","text":"aku lihat lihat dulu ya kak","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_716","text":"hostnya semangat banget","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_717","text":"hostnya semangat banget ya","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_718","text":"hostnya semangat banget dong","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_719","text":"hostnya semangat banget min","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_720","text":"hostnya semangat banget kak","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_721","text":"warna yang dipakai cantik","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_722","text":"warna yang dipakai cantik ya","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_723","text":"warna yang dipakai cantik dong","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_724","text":"warna yang dipakai cantik min","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_725","text":"warna yang dipakai cantik kak","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_726","text":"baru lewat di beranda","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_727","text":"baru lewat di beranda ya","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_728","text":"baru lewat di beranda dong","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_729","text":"baru lewat di beranda min","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_730","text":"baru lewat di beranda kak","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_731","text":"suaranya jelas kak","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_732","text":"suaranya jelas kak ya","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_733","text":"suaranya jelas kak dong","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_734","text":"suaranya jelas kak min","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_735","text":"suaranya jelas kak kak","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_736","text":"boleh tunjukkan bagian belakang","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_737","text":"boleh tunjukkan bagian belakang ya","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_738","text":"boleh tunjukkan bagian belakang dong","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_739","text":"boleh tunjukkan bagian belakang min","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_740","text":"boleh tunjukkan bagian belakang kak","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_741","text":"bahannya terlihat lembut","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_742","text":"bahannya terlihat lembut ya","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_743","text":"bahannya terlihat lembut dong","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_744","text":"bahannya terlihat lembut min","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_745","text":"bahannya terlihat lembut kak","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_746","text":"aku sedang nonton dari jakarta","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_747","text":"aku sedang nonton dari jakarta ya","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_748","text":"aku sedang nonton dari jakarta dong","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_749","text":"aku sedang nonton dari jakarta min","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_750","text":"aku sedang nonton dari jakarta kak","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_751","text":"modelnya cocok untuk acara santai","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_752","text":"modelnya cocok untuk acara santai ya","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_753","text":"modelnya cocok untuk acara santai dong","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_754","text":"modelnya cocok untuk acara santai min","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_755","text":"modelnya cocok untuk acara santai kak","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_756","text":"live malam ini ramai sekali","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_757","text":"live malam ini ramai sekali ya","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_758","text":"live malam ini ramai sekali dong","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_759","text":"live malam ini ramai sekali min","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_760","text":"live malam ini ramai sekali kak","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_761","text":"coba dekatkan produknya ke kamera","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_762","text":"coba dekatkan produknya ke kamera ya","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_763","text":"coba dekatkan produknya ke kamera dong","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_764","text":"coba dekatkan produknya ke kamera min","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_765","text":"coba dekatkan produknya ke kamera kak","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_766","text":"motifnya menarik kak","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_767","text":"motifnya menarik kak ya","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_768","text":"motifnya menarik kak dong","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_769","text":"motifnya menarik kak min","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_770","text":"motifnya menarik kak kak","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_771","text":"aku tag teman dulu","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_772","text":"aku tag teman dulu ya","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_773","text":"aku tag teman dulu dong","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_774","text":"aku tag teman dulu min","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_775","text":"aku tag teman dulu kak","platform":"tiktok","delay_ms":320,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_776","text":"host coba pakai warna biru","platform":"shopee","delay_ms":360,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_777","text":"host coba pakai warna biru ya","platform":"tiktok","delay_ms":400,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_778","text":"host coba pakai warna biru dong","platform":"shopee","delay_ms":440,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_779","text":"host coba pakai warna biru min","platform":"tiktok","delay_ms":480,"label":"browse","split":"train","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_780","text":"host coba pakai warna biru kak","platform":"shopee","delay_ms":280,"label":"browse","split":"train","review_required":true,"review_status":"pending"}
+{"user":"demo_781","text":"kemasannya kelihatan rapi","platform":"tiktok","delay_ms":320,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_782","text":"kemasannya kelihatan rapi ya","platform":"shopee","delay_ms":360,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_783","text":"kemasannya kelihatan rapi dong","platform":"tiktok","delay_ms":400,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_784","text":"kemasannya kelihatan rapi min","platform":"shopee","delay_ms":440,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_785","text":"kemasannya kelihatan rapi kak","platform":"tiktok","delay_ms":480,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_786","text":"aku baru kenal merek ini","platform":"shopee","delay_ms":280,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_787","text":"aku baru kenal merek ini ya","platform":"tiktok","delay_ms":320,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_788","text":"aku baru kenal merek ini dong","platform":"shopee","delay_ms":360,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_789","text":"aku baru kenal merek ini min","platform":"tiktok","delay_ms":400,"label":"browse","split":"validation","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_790","text":"aku baru kenal merek ini kak","platform":"shopee","delay_ms":440,"label":"browse","split":"validation","review_required":true,"review_status":"pending"}
+{"user":"demo_791","text":"semoga livenya lancar","platform":"tiktok","delay_ms":480,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_792","text":"semoga livenya lancar ya","platform":"shopee","delay_ms":280,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_793","text":"semoga livenya lancar dong","platform":"tiktok","delay_ms":320,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_794","text":"semoga livenya lancar min","platform":"shopee","delay_ms":360,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_795","text":"semoga livenya lancar kak","platform":"tiktok","delay_ms":400,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_796","text":"jelaskan bahannya dong kak","platform":"shopee","delay_ms":440,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_797","text":"jelaskan bahannya dong kak ya","platform":"tiktok","delay_ms":480,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_798","text":"jelaskan bahannya dong kak dong","platform":"shopee","delay_ms":280,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_799","text":"jelaskan bahannya dong kak min","platform":"tiktok","delay_ms":320,"label":"browse","split":"test","review_required":false,"review_status":"not_sampled"}
+{"user":"demo_800","text":"jelaskan bahannya dong kak kak","platform":"shopee","delay_ms":360,"label":"browse","split":"test","review_required":true,"review_status":"pending"}

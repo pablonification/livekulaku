@@ -1,0 +1,22 @@
+LiveLaku IndoBERT intent fine-tune
+Date: 2026-08-22 Asia/Jakarta
+Command: /tmp/livelaku-training/bin/python model/training/train.py
+Host training Python: 3.10
+Target application Python: 3.11
+Base model: indobenchmark/indobert-base-p1
+Seed: 42
+Epochs: 3
+Train rows: 640
+Validation rows: 80
+Test rows: 80
+Train loss: 0.531751
+Validation accuracy, epoch 1: 0.7875
+Validation accuracy, epoch 2: 0.9375
+Validation accuracy, epoch 3: 0.9375
+Keyword test accuracy: 0.5625
+IndoBERT test accuracy: 1.0000
+Final checkpoint size on disk: 476 MiB
+
+The test result is from the frozen synthetic held-out split. It should not be
+interpreted as real-world production accuracy. The 10 percent human spot-check
+remains pending until a team member reviews the 80 marked dataset rows.
