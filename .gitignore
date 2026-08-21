@@ -12,6 +12,10 @@ __pycache__/
 .venv/
 venv/
 
+# node
+node_modules/
+backend/node_modules/
+
 # env / secrets — use .env.example as template
 .env
 *.pem
