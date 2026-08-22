@@ -4,3 +4,8 @@ dist
 .gitignore
 npm-debug.log
 .DS_Store
+.env*
+*.pem
+*.key
+*.npmrc
+coverage

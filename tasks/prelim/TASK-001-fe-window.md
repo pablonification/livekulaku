@@ -9,17 +9,25 @@ Single page: dropdown `[Mock | Shopee | TikTok]` + one input field + one output.
 - Live Real (when handle or session_id is filled and user clicks Go Live Real): FE sends `POST /analyze {source: "tiktok", handle: "@tokoku", window_seconds: 10, comments: []}` or `{source: "shopee", session_id: "6236215", comments: []}`. BE fetches real comments for that Window inside the single request (no background job), then returns the same Priority Card shape. Mock remains the default for `docker compose up` with no keys.
 
 ## Files you own (only these)
-- `frontend/public/index.html`
-- `frontend/public/app.js`
-- `frontend/public/style.css`
+- `frontend/index.html`
+- `frontend/src/App.jsx`
+- `frontend/src/global.css`
+- `frontend/src/main.jsx`
+- `frontend/vite.config.js`
+- `frontend/public/demo_comments.jsonl`
+- `frontend/Dockerfile`
+- `frontend/nginx.conf`
+- `frontend/package.json`
+- `frontend/package-lock.json`
+- `docs/screenshots/task-001/*`
 
 ## Files you DO NOT touch
-- `backend/*`, `model/*`, `data/*.json` (read only)
+- `backend/*`, `model/*`, `data/*.json`, `contracts/*` (read only)
 
 ## Done when
-- [ ] `docker compose up` → http://localhost:3000 shows page
-- [ ] Mock flood 18 comments → one Priority Card appears (from example in openapi.yaml)
-- [ ] Shopee/TikTok input switches placeholder text
+- [x] `docker compose up` → http://localhost:3000 shows page
+- [x] Mock flood 18 comments → one Priority Card appears (from example in openapi.yaml)
+- [x] Shopee/TikTok input switches placeholder text
 - [ ] PR includes screenshot + 30s screen recording (like OSKM proof-of-work)
 
 ## Proof of work

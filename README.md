@@ -8,7 +8,7 @@ Dual live commerce copilot for TikTok Shop + Shopee Live. Hosts with 500–5k vi
 
 ## Stack
 
-- **FE:** React 19 + Vite + Astryx Design System (`@astryxdesign/core`, `@astryxdesign/theme-neutral`) served by nginx - single page
+- **FE:** React 19 + Vite served by nginx - single page
 - **BE:** FastAPI (Python 3.11) - `POST /analyze` sync only
 - **AI:** Tier-1 small IndoBERT classifier (supporting model, baked `model/checkpoints/`) + Tier-2 Muse Spark 1.2 contributor (frozen prompt + `data/catalog.json` + `data/playbook.json` via RAG-lite). Mock fallback when no key.
 - **Infra:** `docker compose up --build` (offline judge-safe)
@@ -25,7 +25,19 @@ docker compose up --build
 # One-window check (mock, offline):
 curl -X POST http://localhost:8000/analyze \
   -H "Content-Type: application/json" \
-  -d @data/demo_comments.jsonl
+  -d '{"source":"mock","window_seconds":10,"comments":[{"user":"budi_99","text":"kak harga berapa?","platform":"tiktok"}]}'
+```
+
+For local development with backend reload and frontend HMR, use the opt-in
+development override. It keeps dependencies in a named volume and mounts only
+the source directories needed for editing:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+
+# Use another host port when 8000 or 3000 is already in use.
+BACKEND_PORT=18000 FRONTEND_PORT=13000 \
+  docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 ```
 
 With real providers (optional, only if you set them):
@@ -52,8 +64,8 @@ Source of truth: `contracts/openapi.yaml`
 ```
 contracts/openapi.yaml   API contract (frozen)
 tasks/prelim/TASK-*.md   work tickets - one per dev, agent-friendly
-frontend/                FE Astryx + React 19 + Vite (TASK-001)
-  src/App.jsx, main.jsx, global.css, index.html  Astryx app shell
+frontend/                React 19 + Vite FE (TASK-001)
+  src/App.jsx, main.jsx, global.css, index.html  app shell
   public/demo_comments.jsonl  demo flood for mock judge
 backend/app/             BE + adapters + aggregator (TASK-002)
   classifier.py, coach.py  ML hooks (TASK-003)
