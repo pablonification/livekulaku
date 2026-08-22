@@ -20,7 +20,7 @@ const collected = [];
 connection.on(WebcastEvent.CHAT, (data) => {
   try {
     const user = data?.user?.nickname || data?.user?.uniqueId || "viewer";
-    const text = data?.comment || "";
+    const text = data?.content || data?.comment || "";
     if (text) collected.push({ user, text, platform: "tiktok" });
   } catch {}
 });
