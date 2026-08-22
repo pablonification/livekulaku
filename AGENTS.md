@@ -50,7 +50,7 @@ You are an implementer. You touch **only** files listed in the ticket's "Files y
   pytest backend/tests/test_contract.py -v
   docker compose build
   docker compose up -d && curl -sf http://localhost:8000/api/health && curl -sf -X POST http://localhost:8000/analyze -H "Content-Type: application/json" -d '{"source":"mock","window_seconds":10,"comments":[{"text":"kak harga berapa?"}]}' | grep -q suggested_reply; docker compose down -v
-  grep -R "—" --exclude-dir=.git --exclude-dir=.agents --exclude-dir=.claude --include="*.md" --include="*.yaml" --include="*.py" --include="*.js" --include="*.html" .
+  grep -R "$(printf '\xE2\x80\x94')" --exclude-dir=.git --exclude-dir=.agents --exclude-dir=.claude --include="*.md" --include="*.yaml" --include="*.py" --include="*.js" --include="*.html" .
   ```
 - Do not invent a pass when a required check is not green and no local proof exists.
 

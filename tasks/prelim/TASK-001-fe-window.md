@@ -17,9 +17,9 @@ Single page: dropdown `[Mock | Shopee | TikTok]` + one input field + one output.
 - `backend/*`, `model/*`, `data/*.json` (read only)
 
 ## Done when
-- [ ] `docker compose up` → http://localhost:3000 shows page
-- [ ] Mock flood 18 comments → one Priority Card appears (from example in openapi.yaml)
-- [ ] Shopee/TikTok input switches placeholder text
+- [x] `docker compose up` → http://localhost:3000 shows page
+- [x] Mock flood 18 comments → one Priority Card appears (from example in openapi.yaml)
+- [x] Shopee/TikTok input switches placeholder text
 - [ ] PR includes screenshot + 30s screen recording (like OSKM proof-of-work)
 
 ## Proof of work

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-22T00:00:00+07:00",
+  "title": "Design System: LiveLaku",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#171916",
+        "tonalRamp": ["#171916", "#2B2E2A", "#444843", "#5D625B", "#777C74", "#A3A79F", "#D1D2CD", "#F4F1E8"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cue Paper",
+        "canonical": "#F4F1E8",
+        "tonalRamp": ["#171916", "#2B2E2A", "#444843", "#777C74", "#A3A79F", "#C7C5BC", "#E8E5DB", "#F4F1E8"]
+      },
+      "slate": {
+        "role": "primary",
+        "displayName": "Quiet Slate",
+        "canonical": "#202522",
+        "tonalRamp": ["#202522", "#343A35", "#4A514B", "#626A63", "#7F877F", "#A7ADA7", "#CDD1CC", "#F4F1E8"]
+      },
+      "accent-amber": {
+        "role": "primary",
+        "displayName": "Action Amber",
+        "canonical": "#9A5B00",
+        "tonalRamp": ["#351900", "#5B3200", "#7B4700", "#9A5B00", "#B97712", "#D59837", "#EBC27A", "#F3E2B8"]
+      },
+      "critical": {
+        "role": "tertiary",
+        "displayName": "Critical Red",
+        "canonical": "#A33A30",
+        "tonalRamp": ["#3D0B08", "#621915", "#81251F", "#A33A30", "#BC5A50", "#D4877F", "#EAB4AD", "#F5DCD8"]
+      },
+      "calm": {
+        "role": "tertiary",
+        "displayName": "Calm Green",
+        "canonical": "#2F7053",
+        "tonalRamp": ["#0B281A", "#16432D", "#225C40", "#2F7053", "#4D8B6D", "#79AA91", "#ABD0BB", "#D9EAE0"]
+      },
+      "info": {
+        "role": "tertiary",
+        "displayName": "Info Blue",
+        "canonical": "#2F5F87",
+        "tonalRamp": ["#0B2032", "#153852", "#214C6B", "#2F5F87", "#50799D", "#7B9DB8", "#B1C8D8", "#DDE9F2"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Window Display",
+        "purpose": "Short page titles and the primary cue only."
+      },
+      "body": {
+        "displayName": "Operator Body",
+        "purpose": "Indonesian guidance, why_now, and speakable supporting copy."
+      },
+      "mono": {
+        "displayName": "Measurement Mono",
+        "purpose": "Window duration, counts, IDs, and protocol names only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cue-lift",
+        "value": "0 16px 36px rgba(23, 25, 22, 0.12)",
+        "purpose": "Separate the active Priority Card from secondary evidence on wide screens."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-standard",
+        "value": "180ms cubic-bezier(0.2, 0, 0, 1)",
+        "purpose": "Mark a Window or Priority Card state change without delaying reading."
+      },
+      {
+        "name": "loading-determinate",
+        "value": "250ms linear",
+        "purpose": "Keep the Window progress track synchronized with the fixed duration."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "tablet", "value": "1023px" },
+      { "name": "desktop", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one real action that starts or submits the current Window.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Kirim Window</button>",
+      "css": ".ds-btn-primary { background: #9A5B00; color: #F4F1E8; min-height: 48px; padding: 12px 16px; border: 1px solid #9A5B00; border-radius: 3px; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; letter-spacing: 0.06em; transition: background-color 180ms cubic-bezier(0.2, 0, 0, 1), border-color 180ms cubic-bezier(0.2, 0, 0, 1); } .ds-btn-primary:hover { background: #7B4700; border-color: #7B4700; } .ds-btn-primary:focus-visible { outline: 3px solid #9A5B00; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A real secondary action that does not compete with the primary cue.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Putar flood demo</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #171916; min-height: 48px; padding: 12px 16px; border: 1px solid #C7C5BC; border-radius: 3px; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; letter-spacing: 0.06em; transition: background-color 180ms cubic-bezier(0.2, 0, 0, 1), border-color 180ms cubic-bezier(0.2, 0, 0, 1); } .ds-btn-secondary:hover { background: #E8E5DB; border-color: #9A5B00; } .ds-btn-secondary:focus-visible { outline: 3px solid #9A5B00; outline-offset: 3px; }"
+    },
+    {
+      "name": "Source Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A labeled platform or live identifier field with visible focus and recovery copy.",
+      "html": "<label class=\"ds-field\"><span>Shopee session_id</span><input type=\"text\" placeholder=\"Isi session_id\" /></label>",
+      "css": ".ds-field { display: grid; gap: 8px; color: #171916; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; } .ds-field input { min-height: 48px; padding: 12px 13px; border: 1px solid #C7C5BC; border-radius: 3px; background: #F4F1E8; color: #171916; font: 400 1rem/1.55 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; } .ds-field input::placeholder { color: #5D625B; } .ds-field input:focus-visible { outline: 3px solid #9A5B00; outline-offset: 3px; border-color: #9A5B00; }"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "A non-interactive label that explains current state without relying on color alone.",
+      "html": "<span class=\"ds-status-tag\"><span aria-hidden=\"true\">!</span> Perlu respons</span>",
+      "css": ".ds-status-tag { display: inline-flex; align-items: center; gap: 6px; min-height: 24px; padding: 4px 8px; border: 1px solid #A33A30; border-radius: 3px; background: #F5DCD8; color: #81251F; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Priority Card",
+      "kind": "custom",
+      "refersTo": "priority-card",
+      "description": "The single speakable output for the current Window, with reply first and evidence behind it.",
+      "html": "<article class=\"ds-priority-card\"><p class=\"ds-card-label\">Priority Card</p><h2>Balasan untuk harga</h2><blockquote>Kak, harga promo untuk produk ini sedang aktif. Silakan cek etalase untuk detailnya.</blockquote><p class=\"ds-why\">Banyak komentar menanyakan harga pada Window ini.</p></article>",
+      "css": ".ds-priority-card { padding: 32px; border: 1px solid #C7C5BC; border-radius: 8px; background: #F4F1E8; color: #171916; box-shadow: 0 16px 36px rgba(23, 25, 22, 0.12); } .ds-card-label { margin: 0; color: #5D625B; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; letter-spacing: 0.06em; } .ds-priority-card h2 { margin: 16px 0 0; font: 600 clamp(2rem, 4vw, 3.5rem)/1.02 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.045em; } .ds-priority-card blockquote { max-width: 31ch; margin: 32px 0 0; font: 600 clamp(1.35rem, 2.6vw, 2.25rem)/1.15 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.025em; } .ds-why { max-width: 60ch; margin: 32px 0 0; color: #444843; font: 400 1rem/1.55 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Evidence Disclosure",
+      "kind": "custom",
+      "refersTo": "evidence-disclosure",
+      "description": "Native progressive disclosure for cluster evidence and raw flood details.",
+      "html": "<details class=\"ds-disclosure\"><summary>Lihat bukti cluster</summary><p>Cluster dan komentar Window ditampilkan di sini jika data tersedia.</p></details>",
+      "css": ".ds-disclosure { border-top: 1px solid #C7C5BC; color: #171916; } .ds-disclosure summary { padding: 16px 0; cursor: pointer; font: 600 0.75rem/1.25 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; } .ds-disclosure summary:focus-visible { outline: 3px solid #9A5B00; outline-offset: 3px; } .ds-disclosure p { margin: 0 0 16px; color: #444843; font: 400 1rem/1.55 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Window Cue Sheet",
+    "overview": "LiveLaku is an operational instrument for a host speaking during a live stream. Every fixed Window ends in one clear cue: the most important comment cluster, the urgency, a reason the topic matters now, and one reply the host can say without leaving the stream. The interface must therefore feel closer to a well-edited cue sheet than to an analytics warehouse or a marketing page.\n\nThe visual world combines a light editorial instrument with a quiet control-room alert layer. A warm paper surface gives Indonesian operational copy enough room to breathe. A restrained slate rail carries source, Window timing, and flood evidence. Amber is the one deliberate accent for attention and action. Critical, calm, and informational colors exist only as semantic state channels, never as decoration.",
+    "keyCharacteristics": [
+      "One Window, one focal cue, one next action.",
+      "Light paper output with a quiet slate evidence rail.",
+      "One amber accent reserved for urgency and the primary action.",
+      "Progressive disclosure instead of a wall of metrics.",
+      "Sentence-case Indonesian copy that is short enough to speak aloud.",
+      "Stable spatial hierarchy across operational states."
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Amber is scarce. If a screen uses amber on more than the primary action, the active Window cue, and one urgency indicator, remove the extra use.", "section": "colors" },
+      { "name": "The Non-Color Rule", "body": "Urgency is always communicated by a label, text, or shape in addition to color.", "section": "colors" },
+      { "name": "The Card-First Rule", "body": "On every breakpoint, the host can reach the current cue before raw flood evidence.", "section": "layout" },
+      { "name": "The Flat-By-Default Rule", "body": "If removing a shadow does not reduce comprehension or interaction, remove it.", "section": "elevation" },
+      { "name": "The Speakable Scale Rule", "body": "The suggested reply must be readable at a glance and must never be rendered as tiny supporting text.", "section": "typography" }
+    ],
+    "dos": [
+      "Do make the Priority Card the first answer to the host's next decision.",
+      "Do reserve amber for urgency and the primary action.",
+      "Do keep empty, loading, success, no-flood, stale, and error states equally intentional.",
+      "Do pair every semantic color with text, shape, icon, or position."
+    ],
+    "donts": [
+      "Don't add a dashboard stat row, chart, activity feed, history page, or multi-action queue without a real product decision.",
+      "Don't use blue-purple gradients, grid backgrounds, glassmorphism, glow carpets, or decorative emoji.",
+      "Don't fabricate comments, users, counts, testimonials, benchmarks, security claims, or customer proof.",
+      "Don't add a navigation item or button that has no real destination or behavior."
+    ]
+  }
+}
