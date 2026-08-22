@@ -1,24 +1,22 @@
 services:
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     env_file:
       - path: .env
         required: false
+    init: true
     ports:
-      - "8000:8000"
-    volumes:
-      - ./data:/app/data:ro
-      - ./model/checkpoints:/app/model/checkpoints:ro
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health')"]
-      interval: 10s
-      timeout: 3s
-      retries: 5
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    init: true
     depends_on:
       backend:
         condition: service_healthy
     ports:
-      - "3000:80"
+      - "127.0.0.1:${FRONTEND_PORT:-3000}:80"

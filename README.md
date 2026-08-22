@@ -28,6 +28,18 @@ curl -X POST http://localhost:8000/analyze \
   -d @data/demo_comments.jsonl
 ```
 
+For local development with backend reload and frontend HMR, use the opt-in
+development override. It keeps dependencies in a named volume and mounts only
+the source directories needed for editing:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+
+# Use another host port when 8000 or 3000 is already in use.
+BACKEND_PORT=18000 FRONTEND_PORT=13000 \
+  docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+```
+
 With real providers (optional, only if you set them):
 
 ```bash
