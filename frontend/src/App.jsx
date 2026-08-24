@@ -129,7 +129,7 @@ function getUrgencyTone(u) {
 
 const TOPIC_COLORS = ['#2fb5a5', '#4a8bd6', '#9b7bd6', '#d6b14a', '#d67a4a', '#6e7a7d'];
 
-const DEFAULT_TIKTOK_HANDLE = '@poco_id';
+const DEFAULT_TIKTOK_HANDLE = '@username';
 
 function TikTokLiveViewer({ open, handle, info, loading, error, onHandleChange, onRefresh, onClose, videoRef, hlsError }) {
   const hlsUrl = info?.streamUrl?.hlsPullUrl || info?.streamUrl?.rawHls || null;
@@ -187,19 +187,20 @@ function TikTokLiveViewer({ open, handle, info, loading, error, onHandleChange, 
           ) : (
             <div className="live-offline">
               <p className="muted small">
-                {handle?.trim() ? `${handle.trim()} sedang offline.` : 'Masukkan handle untuk cek.'} TikTok tidak mengizinkan embed live resmi (X-Frame-Options), jadi viewer ini pakai workaround HLS via Webcast. Jika offline, ini tetap berguna untuk uji <code>{DEFAULT_TIKTOK_HANDLE}</code> saat live.
+                {handle?.trim() ? `${handle.trim()} sedang offline.` : 'Masukkan handle untuk cek.'}
               </p>
-              <a href={`https://www.tiktok.com/${(handle || DEFAULT_TIKTOK_HANDLE).replace(/^@/, '@')}/live`} target="_blank" rel="noreferrer" className="btn ghost small">Buka profil TikTok</a>
+              {handle?.trim() ? (
+                <a href={`https://www.tiktok.com/${handle.trim().replace(/^@/, '@')}/live`} target="_blank" rel="noreferrer" className="btn ghost small">Buka profil TikTok</a>
+              ) : null}
             </div>
           )}
         </div>
 
-        <div className="live-foot">
-          <span className="muted small">
-            Workaround: <code>tiktok-live-connector</code> Webcast + <code>hls.js</code>. Official TikTok Live Embed tidak tersedia (diblokir), stream <code>hlsPullUrl</code> di-resolve via backend <code>/api/tiktok/live/{'{handle}'}</code>.
-          </span>
-          {info?.owner?.nickname ? <span className="muted small">Host: {info.owner.nickname} ({info.handle})</span> : null}
-        </div>
+        {info?.owner?.nickname ? (
+          <div className="live-foot">
+            <span className="muted small">Host: {info.owner.nickname} ({info.handle})</span>
+          </div>
+        ) : null}
       </section>
     </div>
   );
@@ -270,7 +271,11 @@ export default function App() {
     try { return localStorage.getItem('livelaku_viewer') === '1'; } catch { return false; }
   });
   const [viewerHandle, setViewerHandle] = useState(() => {
-    try { return localStorage.getItem('livelaku_viewer_handle') || DEFAULT_TIKTOK_HANDLE; } catch { return DEFAULT_TIKTOK_HANDLE; }
+    try {
+      const v = localStorage.getItem('livelaku_viewer_handle');
+      if (!v || v === '@poco_id' || v === DEFAULT_TIKTOK_HANDLE) return '';
+      return v;
+    } catch { return ''; }
   });
   const [viewerInfo, setViewerInfo] = useState(null);
   const [viewerLoading, setViewerLoading] = useState(false);
@@ -317,7 +322,8 @@ export default function App() {
   }, [viewerHandle]);
 
   async function fetchViewerInfo(handle) {
-    const h = (handle || viewerHandle || DEFAULT_TIKTOK_HANDLE).trim() || DEFAULT_TIKTOK_HANDLE;
+    const h = (handle || viewerHandle || '').trim();
+    if (!h) return;
     const clean = h.replace(/^@/, '');
     if (!clean) return;
     setViewerLoading(true);
@@ -491,6 +497,13 @@ export default function App() {
     const wantsLive = source !== 'mock' && id.length > 0;
     const isLiveReq = wantsLive && buffer.length === 0;
     if (buffer.length === 0 && !isLiveReq) return;
+    // Auto-open Live Viewer for the same tiktok handle (viewet)
+    if (source === 'tiktok' && id) {
+      const clean = id.startsWith('@') ? id : `@${id}`;
+      setViewerHandle(clean);
+      setViewerOpen(true);
+      fetchViewerInfo(clean);
+    }
     stopPlayback();
     clearTimers();
     const snap = [...buffer];
