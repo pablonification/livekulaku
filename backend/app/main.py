@@ -369,6 +369,61 @@ async def analyze(req: AnalyzeRequest) -> AnalyzeResponse:
     )
 
 
+# ---------------------------------------------------------------- TikTok LIVE viewer (workaround for embed)
+# TikTok has no official LIVE Embed API. Workaround: use tiktok-live-connector
+# to resolve isLive + HLS FLV/HLS pull URLs (same Webcast push service as comments).
+# Frontend tries HLS via hls.js when available, otherwise shows TikTok link.
+# Verified against @poco_id. No X-Frame embed - TikTok blocks iframe via X-Frame-Options.
+@app.get("/api/tiktok/live/{handle}")
+@app.get("/tiktok/live/{handle}")
+async def tiktok_live_info(handle: str) -> dict:
+    """Return live status + stream URLs for right-side realtime viewer. Sync per-request."""
+    import json as _json
+    import os as _os
+    from pathlib import Path as _Path
+
+    clean = handle.strip().lstrip("@").strip()
+    if not clean or len(clean) > 48:
+        return {"handle": clean, "isLive": False, "error": "invalid handle"}
+
+    helper = _Path(__file__).resolve().parents[1] / "scripts" / "tiktok-live-info.js"
+    if not helper.exists():
+        return {"handle": clean, "isLive": False, "error": "helper missing"}
+
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            "node",
+            str(helper),
+            clean,
+            "9",
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            env={**_os.environ},
+        )
+        try:
+            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=16)
+        except asyncio.TimeoutError:
+            proc.kill()
+            stdout, stderr = await proc.communicate()
+            return {"handle": clean, "isLive": False, "error": "timeout"}
+        txt = stdout.decode().strip() if stdout else ""
+        if txt:
+            try:
+                data = _json.loads(txt)
+                # normalize to always include webcastUrl
+                if "webcastUrl" not in data:
+                    data["webcastUrl"] = f"https://www.tiktok.com/@{clean}/live"
+                if "shareUrl" not in data:
+                    data["shareUrl"] = data.get("webcastUrl")
+                return data
+            except Exception:
+                pass
+        err = stderr.decode().strip() if stderr else ""
+        return {"handle": clean, "isLive": False, "error": "parse_failed", "detail": (err or txt)[:400]}
+    except Exception as exc:
+        return {"handle": clean, "isLive": False, "error": "failed", "detail": str(exc)[:400]}
+
+
 # ---------------------------------------------------------------- legacy / dev routes (keep for local WS demo)
 @app.get("/api/health")
 async def health() -> dict:
