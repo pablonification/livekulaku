@@ -17,7 +17,7 @@ from .aggregator import BufferedComment, WindowAggregator
 from .classifier import get_classifier
 from .config import settings
 from .coach import get_coach
-from .schemas import AnalyzeRequest, AnalyzeResponse, ClusterItem, TopCluster
+from .schemas import AnalyzeRequest, AnalyzeResponse, ClusterItem, CommentIn, TopCluster
 
 app = FastAPI(title="LiveLaku", version="0.1.0")
 
