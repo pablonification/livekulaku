@@ -7,6 +7,37 @@ info:
     of comments, POSTs once, gets one Priority Card back. Frozen at build.
 
 paths:
+  /catalog/parse:
+    post:
+      summary: Parse a product link or share-text into Seller Catalog fields
+      description: |
+        Setup-time helper, called once when the seller adds a product. Stateless:
+        parses in-request, stores nothing. Plain HTTP only, no scraping infra.
+        Missing fields are listed in needs_manual so the FE form can ask the seller.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CatalogParseRequest'
+            example:
+              url: "https://vt.tokopedia.com/t/ZS9BRhoHp6Vgc-mhs03/"
+      responses:
+        '200':
+          description: Parsed product fields, possibly partial
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogParseResponse'
+              example:
+                name: "POCO X8 Pro Series | POCO X8 Pro Max"
+                price: null
+                promo: null
+                stock: null
+                image_url: "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/feeb630a9685455e95a08cfad86c05de~tplv-aphluv4xwc-resize-webp:260:260.webp"
+                parse_source: link
+                needs_manual: [price, promo, stock]
+
   /analyze:
     post:
       summary: Analyze one Window → one Priority Card
@@ -19,6 +50,11 @@ paths:
             example:
               source: mock # mock | shopee | tiktok
               window_seconds: 10
+              products:
+                - name: "Kaos Oversize Hitam"
+                  price: "99k"
+                  promo: "free ongkir Jawa"
+                  stock: 42
               comments:
                 - user: budi_99
                   text: "kak harga berapa?"
@@ -54,13 +90,53 @@ paths:
                     - "kak harga berapa?"
                     - "spill harga dong"
                 urgency: 82
-                suggested_reply: "Harga 99k free ongkir Jawa, luar Jawa +10k kak - langsung checkout biar kebagian!"
+                suggested_reply: "Harga Kaos Oversize 99k free ongkir Jawa kak - langsung checkout biar kebagian!"
                 why_now: "9 dari 18 komen window ini nanya harga - jawab sekarang sebelum pindah live lain."
                 tone: closing
-                source: mock # mock | muse-spark-1.2-contributor
+                source: mock # mock | template | muse-spark-1.2-contributor
 
 components:
   schemas:
+    ProductIn:
+      type: object
+      required: [name]
+      properties:
+        name: {type: string}
+        price: {type: string, nullable: true}
+        promo: {type: string, nullable: true}
+        stock: {type: integer, nullable: true}
+
+    CatalogParseRequest:
+      type: object
+      required: []
+      description: Provide url (product share link) or text (share-sheet blob). Empty input returns manual-entry defaults.
+      properties:
+        url:
+          type: string
+          nullable: true
+          example: "https://id.shp.ee/i4befBuF"
+        text:
+          type: string
+          nullable: true
+          example: "Kaos Oversize Hitam Rp99.000 https://vt.tokopedia.com/t/ZS9BRhoHp6Vgc-mhs03/"
+
+    CatalogParseResponse:
+      type: object
+      required: [parse_source, needs_manual]
+      properties:
+        name: {type: string, nullable: true}
+        price: {type: string, nullable: true, description: normalized string like "99k" or "Rp99.000"}
+        promo: {type: string, nullable: true}
+        stock: {type: integer, nullable: true}
+        image_url: {type: string, nullable: true}
+        parse_source:
+          type: string
+          enum: [link, text, manual]
+          description: how the fields were obtained; manual means nothing parsed, seller fills the form
+        needs_manual:
+          type: array
+          items: {type: string, enum: [name, price, promo, stock]}
+
     AnalyzeRequest:
       type: object
       required: []
@@ -80,6 +156,12 @@ components:
           type: string
           example: "6236215"
           description: Shopee session id for live fetch inside request when source is shopee and comments is empty
+        products:
+          type: array
+          maxItems: 20
+          description: Seller Catalog held client-side and sent inline each call; grounds suggested_reply in real products
+          items:
+            $ref: '#/components/schemas/ProductIn'
         comments:
           type: array
           minItems: 0
@@ -106,7 +188,7 @@ components:
 
     AnalyzeResponse:
       type: object
-      required: [total, window_seconds, clusters, top_cluster, urgency, suggested_reply, why_now]
+      required: [total, window_seconds, clusters, top_cluster, urgency, why_now]
       properties:
         total:
           type: integer
@@ -131,7 +213,13 @@ components:
               type: array
               items: {type: string}
         urgency: {type: integer, minimum: 0, maximum: 100}
-        suggested_reply: {type: string}
+        suggested_reply:
+          type: string
+          nullable: true
+          description: Optional coaching the host may speak; the topic is the main output. Null when no grounded suggestion is available.
         why_now: {type: string}
         tone: {type: string, enum: [closing, reassure, inform, upsell]}
-        source: {type: string}
+        source:
+          type: string
+          enum: [mock, template, muse-spark-1.2-contributor]
+          description: which engine produced the coaching; template is the deterministic keyless fallback
