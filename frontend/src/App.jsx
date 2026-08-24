@@ -129,6 +129,82 @@ function getUrgencyTone(u) {
 
 const TOPIC_COLORS = ['#2fb5a5', '#4a8bd6', '#9b7bd6', '#d6b14a', '#d67a4a', '#6e7a7d'];
 
+const DEFAULT_TIKTOK_HANDLE = '@poco_id';
+
+function TikTokLiveViewer({ open, handle, info, loading, error, onHandleChange, onRefresh, onClose, videoRef, hlsError }) {
+  const hlsUrl = info?.streamUrl?.hlsPullUrl || info?.streamUrl?.rawHls || null;
+  const isLive = !!info?.isLive;
+  const viewerCount = info?.stats?.viewerCount ?? info?.stats?.totalUser ?? null;
+
+  if (!open) return null;
+  return (
+    <div className="col-live">
+      <section className="panel live-viewer" aria-label="TikTok Live Viewer">
+        <div className="panel-head live-head">
+          <span className="live-title">
+            <span className={`live-dot ${isLive ? 'live' : ''}`} aria-hidden />
+            Live Viewer
+          </span>
+          <button className="btn ghost small" onClick={onClose} aria-label="Tutup viewer">Tutup</button>
+        </div>
+
+        <div className="live-controls">
+          <input
+            value={handle}
+            onChange={(e) => onHandleChange(e.target.value)}
+            placeholder={DEFAULT_TIKTOK_HANDLE}
+            className="control-input live-input"
+            aria-label="Handle TikTok"
+          />
+          <button className="btn ghost small" onClick={onRefresh} disabled={loading}>
+            {loading ? '...' : 'Segarkan'}
+          </button>
+        </div>
+
+        <div className="live-status">
+          {loading ? <span className="muted">Memeriksa live...</span> : null}
+          {!loading && error ? <span className="live-error">{error}</span> : null}
+          {!loading && !error && info ? (
+            <span className={`live-badge ${isLive ? 'live' : 'offline'}`}>
+              {isLive ? 'LIVE' : 'OFFLINE'}
+              {viewerCount ? ` · ${viewerCount} penonton` : ''}
+              {isLive && info?.title ? ` · ${info.title.slice(0, 36)}` : ''}
+            </span>
+          ) : null}
+        </div>
+
+        <div className="live-video-wrap">
+          {isLive && hlsUrl ? (
+            <>
+              <video ref={videoRef} controls playsInline muted className="live-video" poster={info?.owner?.avatar || undefined} />
+              {hlsError ? <span className="live-error small">Gagal memutar HLS, coba buka di TikTok.</span> : null}
+            </>
+          ) : isLive && !hlsUrl ? (
+            <div className="live-fallback">
+              <p className="muted small">Live terdeteksi tapi stream HLS tidak tersedia (CORS atau blokir TikTok). Buka langsung di TikTok.</p>
+              <a href={info?.webcastUrl || `https://www.tiktok.com/${handle.replace(/^@/, '@')}/live`} target="_blank" rel="noreferrer" className="btn primary small">Buka di TikTok</a>
+            </div>
+          ) : (
+            <div className="live-offline">
+              <p className="muted small">
+                {handle?.trim() ? `${handle.trim()} sedang offline.` : 'Masukkan handle untuk cek.'} TikTok tidak mengizinkan embed live resmi (X-Frame-Options), jadi viewer ini pakai workaround HLS via Webcast. Jika offline, ini tetap berguna untuk uji <code>{DEFAULT_TIKTOK_HANDLE}</code> saat live.
+              </p>
+              <a href={`https://www.tiktok.com/${(handle || DEFAULT_TIKTOK_HANDLE).replace(/^@/, '@')}/live`} target="_blank" rel="noreferrer" className="btn ghost small">Buka profil TikTok</a>
+            </div>
+          )}
+        </div>
+
+        <div className="live-foot">
+          <span className="muted small">
+            Workaround: <code>tiktok-live-connector</code> Webcast + <code>hls.js</code>. Official TikTok Live Embed tidak tersedia (diblokir), stream <code>hlsPullUrl</code> di-resolve via backend <code>/api/tiktok/live/{'{handle}'}</code>.
+          </span>
+          {info?.owner?.nickname ? <span className="muted small">Host: {info.owner.nickname} ({info.handle})</span> : null}
+        </div>
+      </section>
+    </div>
+  );
+}
+
 function ClusterDonut({ clusters = [], total = 0 }) {
   if (!clusters.length) {
     return <div className="donut-empty">Menunggu komentar</div>;
@@ -189,11 +265,24 @@ export default function App() {
   const [catalogBusy, setCatalogBusy] = useState(false);
   const [catalogMsg, setCatalogMsg] = useState('');
   const [showReply, setShowReply] = useState(false);
+  // TikTok Live Viewer (very right side, toggleable)
+  const [viewerOpen, setViewerOpen] = useState(() => {
+    try { return localStorage.getItem('livelaku_viewer') === '1'; } catch { return false; }
+  });
+  const [viewerHandle, setViewerHandle] = useState(() => {
+    try { return localStorage.getItem('livelaku_viewer_handle') || DEFAULT_TIKTOK_HANDLE; } catch { return DEFAULT_TIKTOK_HANDLE; }
+  });
+  const [viewerInfo, setViewerInfo] = useState(null);
+  const [viewerLoading, setViewerLoading] = useState(false);
+  const [viewerError, setViewerError] = useState('');
+  const [viewerHlsError, setViewerHlsError] = useState('');
 
   const timerRef = useRef(null);
   const progressRef = useRef(null);
   const playbackRef = useRef(null);
   const handleSendNowRef = useRef(null);
+  const viewerVideoRef = useRef(null);
+  const viewerHlsRef = useRef(null);
 
   const hasLiveInput = source !== 'mock' && liveInput.trim().length > 0;
   const canSend = !isLoading && (buffer.length > 0 || hasLiveInput);
@@ -215,8 +304,98 @@ export default function App() {
       window.clearTimeout(timerRef.current);
       window.clearInterval(progressRef.current);
       window.clearTimeout(playbackRef.current);
+      try { viewerHlsRef.current?.destroy(); } catch {}
     };
   }, []);
+
+  // persist viewer toggle/handle
+  useEffect(() => {
+    try { localStorage.setItem('livelaku_viewer', viewerOpen ? '1' : '0'); } catch {}
+  }, [viewerOpen]);
+  useEffect(() => {
+    try { localStorage.setItem('livelaku_viewer_handle', viewerHandle); } catch {}
+  }, [viewerHandle]);
+
+  async function fetchViewerInfo(handle) {
+    const h = (handle || viewerHandle || DEFAULT_TIKTOK_HANDLE).trim() || DEFAULT_TIKTOK_HANDLE;
+    const clean = h.replace(/^@/, '');
+    if (!clean) return;
+    setViewerLoading(true);
+    setViewerError('');
+    setViewerHlsError('');
+    try {
+      const res = await fetch(`/api/tiktok/live/${encodeURIComponent(clean)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (data.error && !data.isLive) {
+        // offline is not fatal, still store isLive:false for UI
+        if (data.error === 'offline' || data.error === 'timeout') {
+          setViewerInfo({ ...data, handle: clean });
+          setViewerError('');
+        } else {
+          setViewerInfo(data);
+          setViewerError(data.detail || data.error);
+        }
+      } else {
+        setViewerInfo(data);
+        setViewerError('');
+      }
+    } catch (e) {
+      setViewerError(friendlyError(e));
+    } finally {
+      setViewerLoading(false);
+    }
+  }
+
+  // auto-fetch when viewer opens or handle changes (debounced)
+  useEffect(() => {
+    if (!viewerOpen) return;
+    fetchViewerInfo(viewerHandle);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [viewerOpen]);
+
+  // HLS attach when stream URL changes
+  useEffect(() => {
+    const hlsUrl = viewerInfo?.streamUrl?.hlsPullUrl || viewerInfo?.streamUrl?.rawHls;
+    const video = viewerVideoRef.current;
+    if (!hlsUrl || !video || !viewerOpen || !viewerInfo?.isLive) {
+      try { viewerHlsRef.current?.destroy(); } catch {}
+      viewerHlsRef.current = null;
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      try {
+        const HlsMod = await import('hls.js');
+        const Hls = HlsMod.default || HlsMod;
+        if (cancelled) return;
+        if (Hls.isSupported()) {
+          try { viewerHlsRef.current?.destroy(); } catch {}
+          const hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+          viewerHlsRef.current = hls;
+          hls.loadSource(hlsUrl);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.ERROR, (_e, data) => {
+            if (data?.fatal) setViewerHlsError(data.details || 'hls fatal');
+          });
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.play().catch(() => {});
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = hlsUrl;
+          video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
+        } else {
+          setViewerHlsError('Browser tidak mendukung HLS');
+        }
+      } catch (e) {
+        setViewerHlsError(friendlyError(e));
+      }
+    })();
+    return () => {
+      cancelled = true;
+      try { viewerHlsRef.current?.destroy(); } catch {}
+    };
+  }, [viewerInfo, viewerOpen]);
 
   function clearTimers() {
     window.clearTimeout(timerRef.current);
@@ -433,13 +612,22 @@ export default function App() {
               </button>
             ))}
           </div>
+          <button
+            className={`btn ghost small viewer-toggle ${viewerOpen ? 'active' : ''}`}
+            onClick={() => setViewerOpen((v) => !v)}
+            aria-pressed={viewerOpen}
+            aria-label="Toggle TikTok Live Viewer"
+            title={viewerOpen ? 'Sembunyikan Live Viewer' : 'Tampilkan Live Viewer'}
+          >
+            <span className={`live-dot small ${viewerInfo?.isLive ? 'live' : ''}`} aria-hidden /> Live
+          </button>
         </div>
         <div className="topbar-progress" aria-hidden>
           <span style={{ width: `${isWindowing ? windowProgress : 0}%` }} />
         </div>
       </header>
 
-      <div className="dashboard">
+      <div className={`dashboard ${viewerOpen ? 'with-viewer' : ''}`}>
 
         <div className="col-left">
           <section className="panel" aria-label="Katalog produk">
@@ -790,6 +978,19 @@ export default function App() {
             ) : null}
           </section>
         </div>
+
+        <TikTokLiveViewer
+          open={viewerOpen}
+          handle={viewerHandle}
+          info={viewerInfo}
+          loading={viewerLoading}
+          error={viewerError}
+          hlsError={viewerHlsError}
+          videoRef={viewerVideoRef}
+          onHandleChange={setViewerHandle}
+          onRefresh={() => fetchViewerInfo(viewerHandle)}
+          onClose={() => setViewerOpen(false)}
+        />
 
       </div>
     </div>
