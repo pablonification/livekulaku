@@ -468,13 +468,29 @@ export default function App() {
             {catalogMsg ? <span className="catalog-msg">{catalogMsg}</span> : null}
             {products.map((p, i) => (
               <div key={`${p.name}-${i}`} className="catalog-row">
-                <input
-                  className="catalog-field catalog-name"
-                  value={p.name}
-                  placeholder="Nama produk"
-                  aria-label={`Nama produk ${i + 1}`}
-                  onChange={(e) => updateProduct(i, 'name', e.target.value)}
-                />
+                <div className="catalog-row-head">
+                  <input
+                    className="catalog-field catalog-name"
+                    value={p.name}
+                    placeholder="Nama produk"
+                    aria-label={`Nama produk ${i + 1}`}
+                    onChange={(e) => updateProduct(i, 'name', e.target.value)}
+                  />
+                  <button
+                    className="catalog-del"
+                    type="button"
+                    onClick={() => removeProduct(i)}
+                    aria-label={`Hapus produk ${i + 1}`}
+                    title="Hapus produk"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M4 7h16" />
+                      <path d="M9 7V4.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V7" />
+                      <path d="M5 7l.4 11.2a2 2 0 0 0 2 1.8h9.2a2 2 0 0 0 2-1.8L19 7" />
+                      <path d="M10 11v6M14 11v6" />
+                    </svg>
+                  </button>
+                </div>
                 <div className="catalog-fields">
                   <input
                     className="catalog-field"
@@ -499,9 +515,6 @@ export default function App() {
                     aria-label={`Stok produk ${i + 1}`}
                     onChange={(e) => updateProduct(i, 'stock', e.target.value)}
                   />
-                  <button className="catalog-del" onClick={() => removeProduct(i)} aria-label={`Hapus produk ${i + 1}`}>
-                    ×
-                  </button>
                 </div>
               </div>
             ))}
