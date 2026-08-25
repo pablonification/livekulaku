@@ -6,7 +6,7 @@ Liveku Laku adalah copilot untuk host live-commerce di TikTok dan Shopee. Dalam 
 
 **COMPFEST 18 AIC - AI for the Backbone of the Economy - Smart Commerce**
 
-![Tampilan Liveku Laku setelah menganalisis satu Window komentar](docs/screenshots/task-001/task-001-desktop-success.png)
+![Tampilan Liveku Laku setelah menganalisis satu Window komentar](docs/screenshots/task-001/task-001-desktop-success.jpg)
 
 ## Masalah yang kami selesaikan
 
