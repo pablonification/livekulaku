@@ -32,7 +32,7 @@ Do not let review feedback expand the PR beyond the user's original goal. Addres
 
 If nothing has changed, stay quiet rather than posting filler comments. Stop when the review bots and required checks are green on the latest commit. Merge only when the user explicitly requested it; otherwise report that the PR is ready.
 
-## LiveLaku ready gate (this repo)
+## Liveku Laku ready gate (this repo)
 
 A PR is ready only when:
 

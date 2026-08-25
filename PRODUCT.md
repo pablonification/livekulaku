@@ -14,13 +14,13 @@ No secondary audience is confirmed for the prelim product.
 
 ## Product Purpose
 
-LiveLaku is a live-commerce copilot that turns a Flood of comments into one Priority Card per fixed 10-second Window. The card identifies the top comment cluster, gives a deterministic urgency score from 0 to 100, proposes a one to two sentence reply the host can speak, and explains why that topic matters now.
+Liveku Laku is a live-commerce copilot that turns a Flood of comments into one Priority Card per fixed 10-second Window. The card identifies the top comment cluster, gives a deterministic urgency score from 0 to 100, proposes a one to two sentence reply the host can speak, and explains why that topic matters now.
 
 Success means the host can scan and act on one clear card for each Window instead of sorting through an unbounded comment feed.
 
 ## Positioning
 
-LiveLaku compresses a platform-agnostic comment Flood into exactly one actionable Priority Card per Window. Normalized adapters and deterministic urgency keep the output consistent across Mock, Shopee, and TikTok sources while preserving the samples and reason the host needs to trust the next action.
+Liveku Laku compresses a platform-agnostic comment Flood into exactly one actionable Priority Card per Window. Normalized adapters and deterministic urgency keep the output consistent across Mock, Shopee, and TikTok sources while preserving the samples and reason the host needs to trust the next action.
 
 ## Operating Context
 
@@ -43,7 +43,7 @@ LiveLaku compresses a platform-agnostic comment Flood into exactly one actionabl
 
 ## Brand Commitments
 
-- Product name: LiveLaku.
+- Product name: Liveku Laku.
 - The interface is Indonesian-first for operational copy, including controls, statuses, guidance, errors, and Priority Card text. Product and protocol names such as Mock, Shopee, TikTok, `session_id`, and `POST /analyze` may remain in their established form when that is clearer.
 - The voice is direct, timely, and speakable by a host during a live stream.
 - No logo, marketing claim, testimonial, or visual identity asset is confirmed by the repository.

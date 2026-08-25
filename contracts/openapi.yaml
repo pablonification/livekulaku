@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: LiveLaku - Flood to Priority Card
+  title: Liveku Laku - Flood to Priority Card
   version: 0.1.0
   description: |
     Single sync endpoint for prelim. Frontend batches one Window (10s)

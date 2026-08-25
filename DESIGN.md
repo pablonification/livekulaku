@@ -1,5 +1,5 @@
 ---
-name: LiveLaku
+name: Liveku Laku
 description: Satu cue yang dapat langsung diucapkan host untuk setiap Window flood komentar.
 colors:
   ink: "#171916"
@@ -95,13 +95,13 @@ components:
     padding: "22px 0 26px"
 ---
 
-# Design System: LiveLaku
+# Design System: Liveku Laku
 
 ## Overview
 
 **Creative North Star: "The Window Cue Sheet"**
 
-LiveLaku is an operational instrument for a host speaking during a live stream. Every fixed Window ends in one clear cue: the most important comment cluster, the urgency, a reason the topic matters now, and one reply the host can say without leaving the stream. The interface must therefore feel closer to a well-edited cue sheet than to an analytics warehouse or a marketing page.
+Liveku Laku is an operational instrument for a host speaking during a live stream. Every fixed Window ends in one clear cue: the most important comment cluster, the urgency, a reason the topic matters now, and one reply the host can say without leaving the stream. The interface must therefore feel closer to a well-edited cue sheet than to an analytics warehouse or a marketing page.
 
 The visual world combines a light editorial instrument with a quiet control-room alert layer. A warm paper surface gives Indonesian operational copy enough room to breathe. A restrained slate workbench carries source, Window timing, and flood evidence. Amber is the one deliberate accent for attention and action. Critical, calm, and informational colors exist only as semantic state channels, never as decoration.
 
@@ -186,7 +186,7 @@ The palette is warm neutral plus slate, with one amber action accent and a small
 
 **Label/Mono Font:** System monospace, only for Window seconds, counts, source IDs, and endpoint names.
 
-**Character:** Commissioner is a low-contrast humanist sans with variable shape axes. A restrained flare and volume setting gives LiveLaku a specific voice without turning the console into a display type specimen. Newsreader is reserved for the spoken cue, where its open editorial forms create a clear focal moment. Both families are self-hosted so the offline Mock path keeps its identity.
+**Character:** Commissioner is a low-contrast humanist sans with variable shape axes. A restrained flare and volume setting gives Liveku Laku a specific voice without turning the console into a display type specimen. Newsreader is reserved for the spoken cue, where its open editorial forms create a clear focal moment. Both families are self-hosted so the offline Mock path keeps its identity.
 
 ### Hierarchy
 
@@ -205,7 +205,7 @@ The palette is warm neutral plus slate, with one amber action accent and a small
 
 ## Layout
 
-LiveLaku uses a cue-first operational sheet, not a generic dashboard shell or card grid.
+Liveku Laku uses a cue-first operational sheet, not a generic dashboard shell or card grid.
 
 ### Desktop, 1024px and above
 
@@ -273,7 +273,7 @@ Shapes are restrained and functional. The system distinguishes controls, surface
 
 The strip answers whether a Window is active and where the comments came from.
 
-- **Content:** LiveLaku wordmark, `Window aktif` or `Siap menerima flood`, source, and freshness.
+- **Content:** Liveku Laku wordmark, `Window aktif` or `Siap menerima flood`, source, and freshness.
 - **Style:** paper background on light mode; slate background only when it improves separation from the output.
 - **State:** pair the live dot with text. The dot is not the only signal.
 - **Behavior:** no dead navigation. Every link must point to an existing section or real external destination.
@@ -395,8 +395,8 @@ Use a native disclosure for clusters and raw comments when the information is su
 - [Material Responsive Layout Grid](https://m2.material.io/design/layout/responsive-layout-grid.html): breakpoint-specific columns, gutters, and margins rather than a fixed desktop canvas.
 - [GOV.UK Notification Banner](https://design-system.service.gov.uk/components/notification-banner/) and [GOV.UK Tag](https://design-system.service.gov.uk/components/tag/): use status patterns sparingly, consistently, and without making labels look like buttons.
 - [Carbon Notification Pattern](https://carbondesignsystem.com/components/notification/usage/): match visual disruption to urgency, keep messages concise, and do not auto-dismiss critical information.
-- [LiveLaku UI unslop research](exa-results/livelaku-ui-unslop-research-2026-08-22.md): Exa-backed typography and operational-surface audit, including the Commissioner and Newsreader selection.
-- [LiveLaku visual direction research note](exa-results/visual-directions-live-console-2026-08-22.md): Exa synthesis, source-quality notes, alternatives, trade-offs, and validation plan.
+- [Liveku Laku UI unslop research](exa-results/livelaku-ui-unslop-research-2026-08-22.md): Exa-backed typography and operational-surface audit, including the Commissioner and Newsreader selection.
+- [Liveku Laku visual direction research note](exa-results/visual-directions-live-console-2026-08-22.md): Exa synthesis, source-quality notes, alternatives, trade-offs, and validation plan.
 
 ### Delivery gate for this design contract
 

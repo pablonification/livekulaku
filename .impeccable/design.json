@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-08-22T00:00:00+07:00",
-  "title": "Design System: LiveLaku",
+  "title": "Design System: Liveku Laku",
   "extensions": {
     "colorMeta": {
       "ink": {
@@ -138,7 +138,7 @@
   ],
   "narrative": {
     "northStar": "The Window Cue Sheet",
-    "overview": "LiveLaku is an operational instrument for a host speaking during a live stream. Every fixed Window ends in one clear cue: the most important comment cluster, the urgency, a reason the topic matters now, and one reply the host can say without leaving the stream. The interface must therefore feel closer to a well-edited cue sheet than to an analytics warehouse or a marketing page.\n\nThe visual world combines a light editorial instrument with a quiet control-room alert layer. A warm paper surface gives Indonesian operational copy enough room to breathe. A restrained slate rail carries source, Window timing, and flood evidence. Amber is the one deliberate accent for attention and action. Critical, calm, and informational colors exist only as semantic state channels, never as decoration.",
+    "overview": "Liveku Laku is an operational instrument for a host speaking during a live stream. Every fixed Window ends in one clear cue: the most important comment cluster, the urgency, a reason the topic matters now, and one reply the host can say without leaving the stream. The interface must therefore feel closer to a well-edited cue sheet than to an analytics warehouse or a marketing page.\n\nThe visual world combines a light editorial instrument with a quiet control-room alert layer. A warm paper surface gives Indonesian operational copy enough room to breathe. A restrained slate rail carries source, Window timing, and flood evidence. Amber is the one deliberate accent for attention and action. Critical, calm, and informational colors exist only as semantic state channels, never as decoration.",
     "keyCharacteristics": [
       "One Window, one focal cue, one next action.",
       "Light paper output with a quiet slate evidence rail.",

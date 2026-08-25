@@ -1,4 +1,4 @@
-"""LiveLaku backend: sync POST /analyze (rulebook: sync-only, single input→output).
+"""Liveku Laku backend: sync POST /analyze (rulebook: sync-only, single input→output).
 
 Also keeps legacy WS /api/live/* for local dev; prelim contract is POST /analyze.
 Schemas are 1:1 with contracts/openapi.yaml - see backend/app/schemas.py.
@@ -28,7 +28,7 @@ from .schemas import (
     TopCluster,
 )
 
-app = FastAPI(title="LiveLaku", version="0.1.0")
+app = FastAPI(title="Liveku Laku", version="0.1.0")
 
 
 class Hub:

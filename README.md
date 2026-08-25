@@ -1,12 +1,12 @@
-# LiveLaku
+# Liveku Laku
 
 > Dari Flood komentar menjadi satu keputusan yang bisa langsung diucapkan host.
 
-LiveLaku adalah copilot untuk host live-commerce di TikTok dan Shopee. Dalam satu **Window** berdurasi 10 detik, LiveLaku mengelompokkan komentar yang masuk, menghitung urgensi secara deterministik, lalu menyajikan tepat satu **Priority Card**: topik yang perlu dijawab sekarang, alasan mengapa topik itu penting, dan saran jawaban yang grounded pada katalog seller.
+Liveku Laku adalah copilot untuk host live-commerce di TikTok dan Shopee. Dalam satu **Window** berdurasi 10 detik, Liveku Laku mengelompokkan komentar yang masuk, menghitung urgensi secara deterministik, lalu menyajikan tepat satu **Priority Card**: topik yang perlu dijawab sekarang, alasan mengapa topik itu penting, dan saran jawaban yang grounded pada katalog seller.
 
 **COMPFEST 18 AIC - AI for the Backbone of the Economy - Smart Commerce**
 
-![Tampilan LiveLaku setelah menganalisis satu Window komentar](docs/screenshots/task-001/task-001-desktop-success.png)
+![Tampilan Liveku Laku setelah menganalisis satu Window komentar](docs/screenshots/task-001/task-001-desktop-success.png)
 
 ## Masalah yang kami selesaikan
 
@@ -14,7 +14,7 @@ Perdagangan digital sudah menjadi bagian penting dari ekonomi Indonesia. [Statis
 
 Live commerce membawa interaksi digital itu ke tempo real-time. Ketika pertanyaan harga, ongkir, stok, COD, garansi, dan checkout datang bersamaan dengan sapaan serta komentar lain, perhatian host menjadi bottleneck. Host harus memilih apa yang perlu dijawab sambil tetap mempresentasikan produk dan menjaga ritme siaran.
 
-LiveLaku tidak membuat antrean rekomendasi baru. Setiap Window menghasilkan satu tindakan yang jelas:
+Liveku Laku tidak membuat antrean rekomendasi baru. Setiap Window menghasilkan satu tindakan yang jelas:
 
 - **Apa yang perlu dijawab:** cluster komentar dengan prioritas tertinggi.
 - **Seberapa mendesak:** skor urgency 0 sampai 100 yang dihitung secara deterministik.
@@ -86,7 +86,7 @@ Build pertama dapat memerlukan beberapa menit. Tunggu hingga service `backend` d
 
 | Layanan | Alamat |
 |---|---|
-| Aplikasi LiveLaku | <http://localhost:3000> |
+| Aplikasi Liveku Laku | <http://localhost:3000> |
 | Dokumentasi interaktif API | <http://localhost:8000/docs> |
 | Health check backend | <http://localhost:8000/api/health> |
 
@@ -253,7 +253,7 @@ Angka tersebut hanya menggambarkan frozen synthetic held-out split dan tidak dik
 ├── frontend/                React, Vite, Astryx, dan nginx
 ├── model/                   Pipeline training dan checkpoint IndoBERT
 ├── tasks/prelim/            Work contract per ticket
-├── CONTEXT.md               Ubiquitous language LiveLaku
+├── CONTEXT.md               Ubiquitous language Liveku Laku
 ├── PRODUCT.md               Product truth dan constraints
 ├── DESIGN.md                Design system dan interaction principles
 └── docker-compose.yml       Runtime lokal utama
@@ -262,7 +262,7 @@ Angka tersebut hanya menggambarkan frozen synthetic held-out split dan tidak dik
 
 ## Batasan MVP
 
-LiveLaku sengaja menjaga scope prelim tetap tajam:
+Liveku Laku sengaja menjaga scope prelim tetap tajam:
 
 - Tidak ada authentication, database, history page, atau analytics dashboard.
 - Tidak ada background worker pada alur `POST /analyze`.

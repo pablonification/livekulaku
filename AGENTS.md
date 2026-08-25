@@ -1,10 +1,10 @@
-# AGENTS.md - LiveLaku, rules for AI coding agents
+# AGENTS.md - Liveku Laku, rules for AI coding agents
 
 This repo is built by 3 devs + AI agents for COMPFEST 18 AIC prelim (deadline **25 Aug 23:55 WIB**). Repo state is truth - not your chat memory. Read files before you code.
 
 ## Project snapshot (so you don't re-ask)
 
-**LiveLaku = TikTok + Shopee live commerce copilot for flood.** Host with 500–5k viewers (15–80 c/min) can't read flood; we buffer one **Window** (10s), cluster comments, return one **Priority Card** `{top_cluster, urgency 0–100 deterministic, suggested_reply, why_now}`. FE shows live bars; card is the only action per Window. See `CONTEXT.md` for language.
+**Liveku Laku = TikTok + Shopee live commerce copilot for flood.** Host with 500–5k viewers (15–80 c/min) can't read flood; we buffer one **Window** (10s), cluster comments, return one **Priority Card** `{top_cluster, urgency 0–100 deterministic, suggested_reply, why_now}`. FE shows live bars; card is the only action per Window. See `CONTEXT.md` for language.
 
 **Stack (keep it boring):** `FastAPI (Python 3.11) + plain JS (no build) + Docker Compose + Muse Spark 1.2 contributor (Tier-2) + small IndoBERT classifier (Tier-1) + tiny frozen catalog/playbook`. No auth, no DB, no history page - rulebook forbids it for prelim.
 

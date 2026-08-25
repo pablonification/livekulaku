@@ -598,7 +598,7 @@ export default function App() {
       <header className="topbar">
         <div className="topbar-left">
           <div className="brand">
-            <span className="brand-name">LiveLaku</span>
+            <span className="brand-name">Liveku Laku</span>
             <span className="brand-dot" aria-hidden />
           </div>
           {lastUpdated ? (
@@ -762,7 +762,7 @@ export default function App() {
                 <p className="hero-title">{hasLiveInput ? `Pantau live ${liveInput.trim()}` : 'Lihat apa yang ditanyakan penonton'}</p>
                 <p className="hero-copy">
                   {hasLiveInput
-                    ? 'Rekam komentar 10 detik, LiveLaku menunjukkan topik yang paling perlu kamu jawab.'
+                    ? 'Rekam komentar 10 detik, Liveku Laku menunjukkan topik yang paling perlu kamu jawab.'
                     : 'Putar demo untuk merasakannya, atau hubungkan live TikTok kamu lewat tab di atas.'}
                 </p>
                 <div className="hero-actions">
