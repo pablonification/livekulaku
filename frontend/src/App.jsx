@@ -34,7 +34,7 @@ const LABEL_ID = {
   garansi: 'Garansi',
   stok: 'Stok',
   checkout: 'Mau checkout',
-  browse: 'Lihat-liat',
+  browse: 'Lihat-Lihat',
 };
 
 const MANUAL_FIELD_ID = {
@@ -859,7 +859,7 @@ export default function App() {
                 <div className="topic-meta">
                   <span>{top?.count ?? 0} dari {card.total} komentar</span>
                   <span className="topic-sep">·</span>
-                  <span>urgensi {urgency}</span>
+                  <span>urgensi {urgency}/100</span>
                 </div>
 
                 {card.why_now ? (
